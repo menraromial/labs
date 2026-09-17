@@ -1,0 +1,125 @@
+2026-09-17T11:41:48+02:00
+Linux pl-dapi-na-salsa-004 7.0.0-31-generic #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Aug  1 04:26:38 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+Architecture :                            x86_64
+Mode(s) opératoire(s) des processeurs :   32-bit, 64-bit
+Tailles des adresses:                     46 bits physical, 48 bits virtual
+Boutisme :                                Little Endian
+Processeur(s) :                           22
+Liste de processeur(s) en ligne :         0-21
+Identifiant constructeur :                GenuineIntel
+Nom de modèle :                           Intel(R) Core(TM) Ultra 7 165H
+Famille de processeur :                   6
+Modèle :                                  170
+Thread(s) par cœur :                      2
+Cœur(s) par socket :                      16
+Socket(s) :                               1
+Révision :                                4
+multiplication des MHz du/des CPU(s) :    28%
+Vitesse maximale du processeur en MHz :   5000,0000
+Vitesse minimale du processeur en MHz :   400,0000
+BogoMIPS :                                6144,00
+Drapeaux :                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid bus_lock_detect movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities
+Virtualisation :                          VT-x
+Cache L1d :                               544 KiB (14 instances)
+Cache L1i :                               896 KiB (14 instances)
+Cache L2 :                                18 MiB (9 instances)
+Cache L3 :                                24 MiB (1 instance)
+Nœud(s) NUMA :                            1
+Nœud NUMA 0 de processeur(s) :            0-21
+Vulnérabilité Gather data sampling :      Not affected
+Vulnérabilité Ghostwrite :                Not affected
+Vulnérabilité Indirect target selection : Not affected
+Vulnérabilité Itlb multihit :             Not affected
+Vulnérabilité L1tf :                      Not affected
+Vulnérabilité Mds :                       Not affected
+Vulnérabilité Meltdown :                  Not affected
+Vulnérabilité Mmio stale data :           Not affected
+Vulnérabilité Old microcode :             Not affected
+Vulnérabilité Reg file data sampling :    Not affected
+Vulnérabilité Retbleed :                  Not affected
+Vulnérabilité Spec rstack overflow :      Not affected
+Vulnérabilité Spec store bypass :         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnérabilité Spectre v1 :                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnérabilité Spectre v2 :                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS Not affected; BHI BHI_DIS_S
+Vulnérabilité Srbds :                     Not affected
+Vulnérabilité Tsa :                       Not affected
+Vulnérabilité Tsx async abort :           Not affected
+Vulnérabilité Vmscape :                   Mitigation; IBPB before exit to userspace
+CPU CORE L1d:L1i:L2:L3    MAXMHZ
+  0    0 16:16:4:0     4700,0000
+  1    1 8:8:2:0       5000,0000
+  2    1 8:8:2:0       5000,0000
+  3    2 12:12:3:0     5000,0000
+  4    2 12:12:3:0     5000,0000
+  5    0 16:16:4:0     4700,0000
+  6    3 20:20:5:0     4700,0000
+  7    3 20:20:5:0     4700,0000
+  8    4 24:24:6:0     4700,0000
+  9    4 24:24:6:0     4700,0000
+ 10    5 28:28:7:0     4700,0000
+ 11    5 28:28:7:0     4700,0000
+ 12    6 0:0:0:0       3800,0000
+ 13    7 2:2:0:0       3800,0000
+ 14    8 4:4:0:0       3800,0000
+ 15    9 6:6:0:0       3800,0000
+ 16   10 1:0           3800,0000
+ 17   11 10:10:1:0     3800,0000
+ 18   12 1:0           3800,0000
+ 19   13 14:14:1:0     3800,0000
+ 20   14 64:64:8       2500,0000
+ 21   15 66:66:8       2500,0000
+NAME ONE-SIZE ALL-SIZE WAYS TYPE        LEVEL  SETS PHY-LINE COHERENCY-SIZE
+L1d       48K     544K   12 Data            1    64        1             64
+L1i       64K     896K   16 Instruction     1    64        1             64
+L2         2M      18M   16 Unified         2  2048        1             64
+L3        24M      24M   12 Unified         3 32768        1             64
+               total       utilisé      libre     partagé tamp/cache   disponible
+Mem:            14Gi       7,6Gi       4,7Gi       1,1Gi       3,7Gi       7,0Gi
+Échange:          0B          0B          0B
+MemTotal:       15253704 kB
+MemAvailable:    7314996 kB
+AnonHugePages:         0 kB
+Hugepagesize:       2048 kB
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+Python 3.14.4
+transparent_hugepage=always [madvise] never
+transparent_hugepage_defrag=always defer defer+madvise [madvise] never
+page_size=4096
+thp_migration_success 0
+thp_migration_fail 0
+thp_migration_split 0
+thp_fault_alloc 887
+thp_fault_fallback 119
+thp_fault_fallback_charge 0
+thp_collapse_alloc 2
+thp_collapse_alloc_failed 0
+thp_file_alloc 185394
+thp_file_fallback 243459
+thp_file_fallback_charge 0
+thp_file_mapped 2157
+thp_split_page 0
+thp_split_page_failed 0
+thp_deferred_split_page 91
+thp_underused_split_page 0
+thp_split_pmd 91
+thp_scan_exceed_none_pte 0
+thp_scan_exceed_swap_pte 0
+thp_scan_exceed_share_pte 0
+thp_split_pud 0
+thp_zero_page_alloc 0
+thp_zero_page_alloc_failed 0
+thp_swpout 0
+thp_swpout_fallback 0
+scaling_governor=powersave
+energy_performance_preference=power
+perf_event_paranoid=4
+loadavg=0.39 0.66 1.15 1/2255 1763055
+none
+options de compilation :
+sources et binaire :
+4aef2c7a1335e22b3b44d3c01803cb80de577fc050dbc3a325bde0cb75f94ffd  src/chase.c
+480c6cd8cff463dab6b2432ac04a0535182762bbe6f73be741437070d071770d  build/chase

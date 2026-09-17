@@ -59,13 +59,16 @@ algorithme, bibliothèque et langage.
 - [x] Projet B2 : dépendances, branchements, petites boucles, fiche superviseur.
 - [x] Projet C1 : prédictions et contrôle d'attribution fixés avant la campagne.
 - [x] Projet C1 : campagne sur cœurs P, E et LP-E, interprétation, fiche superviseur.
+- [x] Projet C2 : prédictions et contrôles d'attribution fixés avant la campagne.
+- [x] Projet C2 : latence, TLB et défauts de page mesurés, fiche superviseur.
 
 Voir [le diagnostic initial](docs/environment-observed.md),
 [le projet A1](experiments/01-time/README.md),
 [le projet A2](experiments/02-microbenchmark/README.md),
 [le projet B1](experiments/03-compilation/README.md),
-[le projet B2](experiments/04-dependencies-branches/README.md) et
-[le projet C1](experiments/05-memory-traversal/README.md).
+[le projet B2](experiments/04-dependencies-branches/README.md),
+[le projet C1](experiments/05-memory-traversal/README.md) et
+[le projet C2](experiments/06-dependent-access/README.md).
 
 ## Structure cible (créée progressivement)
 

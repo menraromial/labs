@@ -1,0 +1,9 @@
+core,pages,label,G_16MiB_over_1MiB,ci95_low,ci95_high
+LP-E,2m,independent_random,1.787,1.787,1.787
+LP-E,2m,chase_random,1.467,1.467,1.467
+LP-E,4k,independent_random,1.996,1.996,1.996
+LP-E,4k,chase_random,1.484,1.484,1.484
+P,2m,independent_random,2.354,2.354,2.354
+P,2m,chase_random,8.211,8.211,8.211
+P,4k,independent_random,3.417,3.417,3.417
+P,4k,chase_random,4.401,4.401,4.401

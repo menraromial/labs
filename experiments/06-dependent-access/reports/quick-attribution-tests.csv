@@ -1,0 +1,5 @@
+test,value,threshold,passed
+"G(LP-E, 2 Mio) / G(P, 2 Mio), independent_random",0.759,>= 2,0
+"G(P, 2 Mio) / G(P, 4 Kio), independent_random",0.689,<= 0.6,0
+"G(LP-E, 2 Mio) / G(P, 2 Mio), chase_random",0.179,>= 2,0
+"G(P, 2 Mio) / G(P, 4 Kio), chase_random",1.866,<= 0.6,0

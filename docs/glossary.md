@@ -101,4 +101,18 @@
   soutenu entre processeur et mémoire vive.
 - **Latence d'accès** (*access latency*) : durée pour obtenir une donnée précise ;
   à distinguer du débit quand plusieurs accès se recouvrent.
+- **Accès dépendants** (*pointer chasing*) : parcours où l'adresse de chaque accès
+  est la valeur lue au précédent ; il empêche le recouvrement des défauts de cache.
+- **Adresse virtuelle, adresse physique** (*virtual*, *physical address*) : adresse
+  manipulée par le programme, et adresse réelle en mémoire vive.
+- **Table des pages** (*page table*) : structure à plusieurs niveaux qui traduit les
+  adresses virtuelles en adresses physiques.
+- **Défaut de TLB** (*TLB miss*) : traduction absente de la TLB, qui oblige à
+  parcourir la table des pages (*page walk*).
+- **Page géante** (*huge page*) : page de 2 Mio, qui couvre 512 pages de 4 Kio.
+- **Défaut de page** (*page fault*) : premier accès à une page virtuelle sans page
+  physique ; le noyau alloue et met à zéro une page. **Mineur** (*minor*) quand
+  aucun disque n'est lu.
+- **Cycle de Sattolo** (*Sattolo's algorithm*) : permutation aléatoire formant un
+  seul cycle qui passe par tous les éléments.
 

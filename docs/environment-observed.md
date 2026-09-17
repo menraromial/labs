@@ -48,6 +48,16 @@ Aucun benchmark de durée n'a encore été exécuté.
   en mode `madvise`) ; pages géantes de 2 Mio disponibles.
 - Mémoire disponible au moment de C1 : environ 4,9 Gio sur 14,5 Gio.
 
+## Compléments observés pendant C2
+
+- Pages géantes de 2 Mio obtenues à 100 % pendant la campagne pour les zones
+  demandées avec `MADV_HUGEPAGE`, mais partiellement refusées pendant la mise au
+  point : leur disponibilité dépend de l'état de la mémoire.
+- Latence d'un accès lointain non recouvert : environ 400 ns, sur les cœurs P et
+  LP-E. Le type de mémoire vive n'est pas identifiable sans droits
+  d'administration (`dmidecode`).
+- Défaut de page mineur en pages de 4 Kio, mise à zéro comprise : environ 2 µs.
+
 ## Ce que ces faits ne garantissent pas
 
 - La topologie hybride exacte des cœurs performants/efficaces n'est pas encore
@@ -70,4 +80,3 @@ architecture, noyau et méthodologie de performance. La première compétence à
 construire n'est donc pas l'emploi d'un profileur : c'est la capacité à définir
 précisément une grandeur, le périmètre chronométré et les explications alternatives.
 Le niveau en C et en Linux reste à observer dans les exercices, plutôt qu'à deviner.
-

@@ -1,0 +1,5 @@
+run_id,core,cpu,pages,seed,rounds,warmup_rounds,min_log2,max_log2,accesses_log2,chase_accesses_log2,fault_small_log2,fault_large_log2
+1,LP-E,21,4k,20260919,2,1,12,14,10,8,21,22
+2,LP-E,21,2m,20260919,2,1,12,14,10,8,21,22
+3,P,11,2m,20260919,2,1,12,14,10,8,21,22
+4,P,11,4k,20260919,2,1,12,14,10,8,21,22

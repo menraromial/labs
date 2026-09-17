@@ -1,0 +1,5 @@
+core,pages,processes,aa_median,aa_ci95_low,aa_ci95_high,aa_min,aa_max,double_duration_median,double_duration_ci95_low,double_duration_ci95_high,double_duration_min,double_duration_max,huge_share_min,huge_share_max,max_involuntary_switches
+LP-E,2m,1,0.9296,0.9296,0.9296,0.9296,0.9296,1.8129,1.8129,1.8129,1.8129,1.8129,1.000,1.000,3
+LP-E,4k,1,0.9996,0.9996,0.9996,0.9996,0.9996,1.6878,1.6878,1.6878,1.6878,1.6878,0.000,0.000,4
+P,2m,1,1.0446,1.0446,1.0446,1.0446,1.0446,2.0396,2.0396,2.0396,2.0396,2.0396,1.000,1.000,2
+P,4k,1,1.0486,1.0486,1.0486,1.0486,1.0486,1.4495,1.4495,1.4495,1.4495,1.4495,0.000,0.000,2
