@@ -9,7 +9,8 @@ la forme d'une courbe.
 taille, avec un débit de 5 à 15 Gio/s ; des accès aléatoires coûtant 40 à 200 ns à
 256 Mio ; des transitions près des tailles annoncées des caches L1d, L2 et L3. Un
 contrôle était fixé à l'avance : le cœur LP-E n'ayant pas de cache L3, le rapport
-`G = coût(16 Mio) / coût(1 Mio)` devait y être au moins deux fois plus grand que
+$G = c(16\ \text{Mio}) / c(1\ \text{Mio})$, où $c$ est le coût d'un accès aléatoire
+pour une taille de données donnée, devait y être au moins deux fois plus grand que
 sur les cœurs P et E, faute de quoi l'attribution au L3 serait abandonnée.
 
 **Nous avons mesuré**, sur le cœur P, un coût identique pour tous les ordres
@@ -19,14 +20,14 @@ d'accès tant que les données tiennent dans 1 Mio (1,1 à 1,6 ns), puis, à 256
 indépendants coûtent bien moins que la latence d'accès attendue, parce que le
 processeur traite plusieurs défauts de cache en parallèle ; à 256 Mio, le cœur
 LP-E est 2,8 fois plus lent que le cœur P. Aucune transition n'apparaît près du
-L1d. Le contrôle d'attribution a échoué : `G` vaut 7,9 (P), 6,2 (E) et 11,0
+L1d. Le contrôle d'attribution a échoué : $G$ vaut 7,9 (P), 6,2 (E) et 11,0
 (LP-E), soit un rapport de 1,4 et 1,8 au lieu d'au moins 2. Lire 16 octets à
 cheval sur deux lignes de cache coûte 1,3 à 2,3 fois plus que dans une seule
 ligne à 256 Mio.
 
 **Le protocole était** un programme C compilé par GCC `-O2` ; 33 tailles de 4 Kio
 à 256 Mio par demi-octaves ; 9 parcours (séquentiel, trois pas constants,
-aléatoire, deux paires de lectures, contrôles A/A et positif) ; 2^20 accès par
+aléatoire, deux paires de lectures, contrôles A/A et positif) ; $2^{20}$ accès par
 échantillon ; pages de 4 Kio imposées au seul processus ; 8 processus
 indépendants par cœur (P, E, LP-E), épinglés, dans un ordre aléatoire fixé ; 9
 tours dont le premier jeté. Les 64 152 résultats ont été vérifiés par une

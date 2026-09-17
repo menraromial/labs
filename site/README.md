@@ -73,5 +73,7 @@ remplacé par son texte ; il ne bloque pas la publication.
   s'affichent sans échappement.
 - Formules KaTeX : `$\frac{T_1}{T_p}$` en ligne, `$$...$$` en bloc. Un `$` isolé
   dans le texte courant doit donc être écrit dans du code (`` `$HOME` ``).
+- Légendes des figures : tirées du texte qui cite la figure ; leurs formules `$...$`
+  sont rendues par KaTeX (`src/plugins/remark-figure.js`).
 - Diagrammes Mermaid : bloc de code ` ```mermaid `.
 - Recherche locale en français, sans service externe.

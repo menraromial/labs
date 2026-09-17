@@ -241,12 +241,12 @@ def plot_batching(table, fits, chunks, path):
         for index, core in enumerate(c for c in CORES if (c, device) in fits):
             s, b = fits[(core, device)]
             axis.plot(dense, s + b * dense, **figstyle.reference_style(
-                label=r"Modèle $S + b \times$ bloc" if index == 0 else None))
+                label=r"Modèle $S + b\,\ell$" if index == 0 else None))
         axis.set_xscale("log", base=2)
         axis.set_xticks(ticks, [size_label(c) for c in ticks])
         axis.xaxis.set_minor_locator(NullLocator())
         readable_log_axis(axis, *values, top_pad=3)   # place réservée à la légende
-        axis.set(xlabel="Taille du bloc", ylabel="Coût par appel (ns)")
+        axis.set(xlabel=r"Taille du bloc $\ell$", ylabel=r"Coût par appel $t$ (ns)")
         axis.legend()
         figstyle.panel_title(axis, letter, title)
 
@@ -263,10 +263,10 @@ def plot_batching(table, fits, chunks, path):
     byte_axis.set_xscale("log", base=2)
     byte_axis.set_xticks(ticks, [size_label(c) for c in ticks])
     byte_axis.xaxis.set_minor_locator(NullLocator())
-    byte_axis.set_xlabel("Taille du bloc")
+    byte_axis.set_xlabel(r"Taille du bloc $\ell$")
     byte_axis.set_yscale("log")
     figstyle.log_axis(byte_axis, "y")
-    byte_axis.set_ylabel("Coût par octet (ns)")
+    byte_axis.set_ylabel(r"Coût par octet $t/\ell$ (ns)")
     byte_axis.legend(handles=handles)
     figstyle.panel_title(byte_axis, "c", "Coût par octet")
     figstyle.save(figure, path)

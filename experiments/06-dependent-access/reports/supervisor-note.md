@@ -8,7 +8,9 @@ combien coûte le premier accès à une mémoire neuve.
 **Nous prévoyions**, sur le cœur P, 250 à 600 ns par accès dépendant lointain et un
 rapport de 10 à 40 avec les accès indépendants, plus faible sur le cœur LP-E ; une
 liste chaînée contiguë presque aussi rapide que dans le cache ; avec des pages de
-2 Mio, un contrôle d'attribution au L3 réussi (`G(LP-E) ≥ 2 × G(P)`) et une
+2 Mio, un contrôle d'attribution au L3 réussi, c'est-à-dire
+$G_{\text{LP-E}} \geq 2\,G_{\text{P}}$ avec $G = c(16\ \text{Mio}) / c(1\ \text{Mio})$ le
+critère de C1 ($c$ : coût d'un accès pour une taille de données), et une
 transition de C1 réduite d'au moins 40 % ; enfin 0,3 à 3 µs par défaut de page de
 4 Kio, et un premier accès 2 à 15 fois moins cher par Mio en pages de 2 Mio.
 
@@ -18,7 +20,7 @@ C1. Les accès indépendants coûtent 16 à 20 fois moins sur le cœur P et 9 à
 moins sur le cœur LP-E : le cœur P recouvre une vingtaine de défauts de cache. Une
 liste chaînée contiguë coûte 4 ns, moins de 1 % de la liste dispersée. Les pages
 géantes réduisent de 11 à 36 % le coût des accès à 256 Mio. Les deux contrôles
-fixés à l'avance échouent : `G(LP-E) / G(P)` vaut 1,61 et la transition n'est
+fixés à l'avance échouent : $G_{\text{LP-E}} / G_{\text{P}}$ vaut 1,61 et la transition n'est
 réduite que de 20 %. Un défaut de page de 4 Kio coûte environ 2 µs ; avec des pages
 de 2 Mio, le premier accès coûte 2,3 à 3,5 fois moins par Mio.
 

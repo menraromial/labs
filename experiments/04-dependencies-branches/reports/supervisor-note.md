@@ -7,15 +7,16 @@ donnée par le compilateur à une condition.
 
 **Nous prévoyions**, après lecture de l'assembleur des 6 binaires : un rapport de
 2,5 à 4,5 entre deux boucles qui ne diffèrent que par la place d'une
-multiplication ; un coût en cloche selon la part `p` d'éléments retenus pour un
+multiplication ; un coût en cloche selon la part $p$ d'éléments retenus pour un
 branchement, avec au moins un facteur 5 entre données mélangées et triées ; une
 pénalité de 5 à 15 ns par mauvaise prédiction ; un coût plat pour les versions
 `cmov`, masque ou sans branchement ; enfin, un surcoût localisé pour les boucles
 de 32 à 128 itérations, qui expliquerait une observation de B1.
 
-**Nous avons mesuré** un rapport de 3,0 entre `h = (h ^ x) * K` et `h ^= x * K`
-(1,61 contre 0,54 ns par élément), la première boucle gardant le même coût dans
-les 6 binaires, faute de pouvoir être vectorisée. Sur le même multiensemble de
+**Nous avons mesuré** un rapport de 3,0 entre $h \leftarrow (h \oplus x_i) \times K$
+et $h \leftarrow h \oplus (x_i \times K)$, où $x_i$ est l'élément lu et $K$ une
+constante de 64 bits (1,61 contre 0,54 ns par élément). La première boucle garde
+le même coût dans les 6 binaires, faute de pouvoir être vectorisée. Sur le même multiensemble de
 valeurs et le même code machine, un filtre à branchement coûte 5,7 ns par
 élément en ordre aléatoire et 0,41 ns trié (facteur 14), avec une pénalité
 ajustée de 9,4 à 10,9 ns par mauvaise prédiction (R² ≥ 0,94). La même
@@ -42,7 +43,7 @@ surcoût observé en B1.
 **Les limites sont** l'absence de compteurs matériels : mauvaises prédictions et
 cycles sont inférés de durées, pas comptés. Les données sont synthétiques et
 indépendantes, et un seul processeur a été étudié. Trois observations restent
-inexpliquées : aux `p` intermédiaires, un taux apparent de mauvaises prédictions
+inexpliquées : aux $p$ intermédiaires, un taux apparent de mauvaises prédictions
 supérieur à celui d'un vote majoritaire ; la compensation du saut entre 48 et
 256 itérations ; le faible coût des appels courts chez Clang.
 

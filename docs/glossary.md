@@ -150,3 +150,16 @@
   pages contiguës.
 - **Regroupement des validations** (*group commit*) : une seule demande de
   persistance pour plusieurs écritures, qui en partage le coût fixe.
+- **Centile** (*percentile*) : le 95ᵉ centile d'une série est la valeur sous laquelle
+  se trouvent 95 % des observations.
+- **Fonction de répartition empirique** (*ECDF*) : pour chaque valeur, la fraction des
+  observations qui lui sont inférieures ou égales.
+- **Écart interquartile relatif** (*relative interquartile range*) : écart entre les
+  75ᵉ et 25ᵉ centiles, divisé par la médiane.
+- **Corrélation de rang de Spearman** (*Spearman rank correlation*) : corrélation
+  entre les rangs de deux séries, de -1 à 1.
+- **Coefficient de détermination** (*coefficient of determination*, $R^2$) : part de la
+  variation expliquée par un ajustement ; 1 pour un ajustement parfait.
+- **Déroulage de boucle** (*loop unrolling*) : le compilateur écrit plusieurs itérations
+  par tour de boucle.
+- **Demi-octave** : facteur $\sqrt{2}$ entre deux tailles successives.

@@ -441,7 +441,7 @@ def plot_amortization(amortization, path):
     cost.set_yscale("log")
     figstyle.fixed_ticks(cost, "x", ticks)
     figstyle.fixed_ticks(cost, "y", readable_log_ticks(*[s["matrix"] for s in strata.values()]))
-    cost.set(xlabel="Taille du lot N (opérations)", ylabel="Coût apparent (ns/opération)")
+    cost.set(xlabel=r"Taille du lot $N$ (opérations)", ylabel=r"Coût apparent $T(N)/N$ (ns)")
     cost.legend()
     figstyle.panel_title(cost, "a", "Amortissement du chronométrage")
 
@@ -458,7 +458,7 @@ def plot_amortization(amortization, path):
     figstyle.fixed_ticks(spread, "y", readable_log_ticks(
         100 * amortization["within"], 100 * amortization["between"],
         100 * amortization["between_same"]))
-    spread.set(xlabel="Taille du lot N (opérations)", ylabel="Écart interquartile relatif (%)")
+    spread.set(xlabel=r"Taille du lot $N$ (opérations)", ylabel="Écart interquartile relatif (%)")
     spread.legend()
     figstyle.panel_title(spread, "b", "Dispersion selon l'échelle d'observation")
     figstyle.save(figure, path)
@@ -470,11 +470,11 @@ def plot_repair(ladder, prime, affinity, path):
                      "Lots entrelacés\nordre aléatoire"]
 
     ratio_panel(same, ladder, LADDER, ladder_labels, "A_bis/A", 1, show_share=True)
-    same.set_ylabel(r"Rapport $A_{bis}/A$ par processus")
+    same.set_ylabel(r"$t_{A_\mathrm{bis}}/t_A$ par processus")
     figstyle.panel_title(same, "a", "Contrôle A/A : rapport vrai 1")
 
     ratio_panel(double, ladder, LADDER, ladder_labels, "B/A", 2, show_share=False)
-    double.set_ylabel(r"Rapport $B/A$ par processus")
+    double.set_ylabel(r"$t_B/t_A$ par processus")
     figstyle.panel_title(double, "b", "Contrôle positif : deux fois plus d'appels")
 
     if prime:
@@ -482,7 +482,7 @@ def plot_repair(ladder, prime, affinity, path):
                     ["Aucun", "Lecture\nd'horloge", "Appel des\nfonctions", "Mesure\njetée"],
                     "A_bis/A", 1, show_share=True)
         primed.set(xlabel="Amorçage non chronométré (protocole naïf)",
-                   ylabel=r"Rapport $A_{bis}/A$ par processus")
+                   ylabel=r"$t_{A_\mathrm{bis}}/t_A$ par processus")
         figstyle.panel_title(primed, "c", "Contrôle exploratoire : premier passage")
     else:
         primed.set_visible(False)
@@ -499,7 +499,7 @@ def plot_repair(ladder, prime, affinity, path):
     categorical_axis(cores, [names[g] for g in groups])
     cores.set_ylim(0, max(max(affinity[g]["costs"]) for g in groups) * 1.15)
     figstyle.french_ticks(cores, "y")
-    cores.set(xlabel="Lots entrelacés", ylabel="Coût de A (ns/opération)")
+    cores.set(xlabel="Lots entrelacés", ylabel=r"$t_A$ (ns par opération)")
     cores.legend()
     figstyle.panel_title(cores, "d", "Contrôle d'affinité")
     figstyle.save(figure, path)

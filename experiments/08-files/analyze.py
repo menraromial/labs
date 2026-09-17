@@ -222,7 +222,7 @@ def plot_reads(processes, table, path):
         figstyle.ecdf(latency, pooled(processes, (label, 0)), color=figstyle.PALETTE[index],
                       linestyle=styles[index], label=name)
     duration_axis(latency, "x")
-    latency.set(xlabel="Latence d'une lecture de 4 Kio", ylabel="Fraction des lectures")
+    latency.set(xlabel=r"Latence $t$ d'une lecture de 4 Kio", ylabel="Fraction des lectures")
     figstyle.fixed_ticks(latency, "y", (0, 0.25, 0.5, 0.75, 1))
     latency.set_ylim(0, 1.02)
     latency.legend(title="Pages distinctes au hasard")
@@ -245,7 +245,7 @@ def plot_reads(processes, table, path):
     throughput.set_ylim(low, high)
     ticks = [m * 10.0 ** e for e in range(-2, 4) for m in (1, 2, 5) if low <= m * 10.0 ** e <= high]
     figstyle.fixed_ticks(throughput, "y", ticks)
-    throughput.set_ylabel("Débit (Gio/s)")
+    throughput.set_ylabel(r"Débit $D$ (Gio/s)")
     throughput.legend()
     figstyle.panel_title(throughput, "b", "Lecture séquentielle de 256 Mio")
     figstyle.save(figure, path)
@@ -257,7 +257,7 @@ def plot_writes(processes, table, fit, path):
         color, style = WRITE_STYLE[label]
         figstyle.ecdf(latency, pooled(processes, (label, param)), color=color, linestyle=style, label=name)
     duration_axis(latency, "x")
-    latency.set(xlabel="Latence d'une opération (4 Kio)", ylabel="Fraction des opérations")
+    latency.set(xlabel=r"Latence $t$ d'une opération (4 Kio)", ylabel="Fraction des opérations")
     figstyle.fixed_ticks(latency, "y", (0, 0.25, 0.5, 0.75, 1))
     latency.set_ylim(0, 1.02)
     latency.legend()
@@ -287,7 +287,7 @@ def plot_writes(processes, table, fit, path):
     batches.set_yscale("log")
     batches.set_ylim(plain / 2, center.max() * 8)
     duration_axis(batches, "y")
-    batches.set(xlabel="Enregistrements par fsync (k)", ylabel="Coût par enregistrement")
+    batches.set(xlabel=r"Enregistrements par fsync $k$", ylabel=r"Coût par enregistrement $t(k)/k$")
     batches.legend()
     figstyle.panel_title(batches, "b", "Regrouper les demandes de persistance")
     figstyle.save(figure, path)

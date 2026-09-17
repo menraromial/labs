@@ -22,7 +22,7 @@ transaction du journal coûtent 7 ms. Un `fsync` coûte 6,94 ms plus 4,8 µs par
 enregistrement du lot : 32 µs par enregistrement pour 256 par `fsync`. Les
 prédictions tiennent sauf trois : le rapport des lectures aléatoires (43 au lieu
 d'au moins 50), celui des lectures séquentielles (2,1 au lieu d'au moins 3) et
-`fdatasync / fsync` en réécriture (0,284, sous la borne de 0,3).
+le rapport de `fdatasync` à `fsync` en réécriture (0,284, sous la borne de 0,3).
 
 **Le protocole était** un programme C compilé par GCC `-O2` ; 23 mesures (lectures
 séquentielles et aléatoires en cache, sans cache et en `O_DIRECT` ; écritures sans

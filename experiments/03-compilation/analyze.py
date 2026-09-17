@@ -302,10 +302,10 @@ def plot_scaling(curves, sizes, path):
         throughput.set_ylim(0, max(float(np.max(1 / c["median"])) for c in everything) * 1.1)
         figstyle.french_ticks(throughput, "y")
         duration.set(ylabel="Durée d'un appel (ns)")
-        cost.set(ylabel="Coût par élément (ns)")
-        throughput.set(ylabel=r"Débit ($10^9$ éléments/s)")
+        cost.set(ylabel=r"Coût par élément $c$ (ns)")
+        throughput.set(ylabel=r"Débit $1/c$ ($10^9$ éléments/s)")
         for axis in (duration, cost, throughput):
-            axis.set_xlabel("Taille n (éléments)")
+            axis.set_xlabel(r"Taille $n$ (éléments)")
         duration.legend(title=name, title_fontsize=6.5)
         figstyle.panel_title(duration, next(letters), f"{name} : durée d'un appel")
         figstyle.panel_title(cost, next(letters), f"{name} : coût par élément")
@@ -338,7 +338,7 @@ def plot_eliminated(curves, sizes, slopes, assembly, path):
             figstyle.log_axis(axis, "y")
             low, high = figstyle.decade_limits(*values, pad=1)
             axis.set_ylim(low, high * 1000)  # marge réservée à la légende, au-dessus des courbes
-            axis.set(xlabel="Taille n (éléments)", ylabel="Coût apparent par élément (ns)")
+            axis.set(xlabel=r"Taille $n$ (éléments)", ylabel=r"Coût apparent par élément $c$ (ns)")
             axis.legend(title="Niveau : pente ; boucle", title_fontsize=6.5)
             figstyle.panel_title(axis, next(letters), f"{COMPILER_LABELS[compiler]} : {titles[label]}")
     figstyle.save(figure, path)
@@ -378,12 +378,12 @@ def plot_controls(controls, speedups, frequency, sizes, path):
     figure, ((same, twice), (gain, freq)) = figstyle.subplots(2, 2, height=3.8)
 
     ratio_strip(same, controls, "aa", 1)
-    same.set_ylabel("sum_array_bis / sum_array")
+    same.set_ylabel(r"$c_\mathrm{bis}/c$ par processus")
     same.legend(ncols=2)
     figstyle.panel_title(same, "a", "Contrôle A/A : rapport vrai 1")
 
     ratio_strip(twice, controls, "twice", 2)
-    twice.set_ylabel("sum_array_twice / sum_array")
+    twice.set_ylabel(r"$c_\mathrm{twice}/c$ par processus")
     twice.legend(ncols=2)
     figstyle.panel_title(twice, "b", "Contrôle positif : deux parcours")
 
@@ -401,13 +401,13 @@ def plot_controls(controls, speedups, frequency, sizes, path):
     top = max(v[2] for v in speedups.values())
     figstyle.fixed_ticks(gain, "y", [t for t in (1, 2, 5, 10, 20, 50) if t <= top * 1.6])
     gain.set_ylim(0.8, top * 1.6)
-    gain.set_ylabel("Accélération par rapport à -O0")
+    gain.set_ylabel(r"Accélération $S$ par rapport à -O0")
     from matplotlib.lines import Line2D
     handles = [Line2D([], [], color=figstyle.INK, marker="o", linestyle="none", markersize=3.2,
-                      label=f"n = {figstyle.french_number(REFERENCE_N)} (512 Kio)"),
+                      label=f"$n$ = {figstyle.french_number(REFERENCE_N)} (512 Kio)"),
                Line2D([], [], color=figstyle.INK, marker="o", markerfacecolor="white",
                       linestyle="none", markersize=3.2,
-                      label=f"n = {figstyle.french_number(sizes[-1])} (32 Mio)")]
+                      label=f"$n$ = {figstyle.french_number(sizes[-1])} (32 Mio)")]
     gain.legend(handles=handles)
     figstyle.panel_title(gain, "c", "Gain d'optimisation : sum_array")
 
@@ -423,9 +423,11 @@ def plot_controls(controls, speedups, frequency, sizes, path):
     freq.axhline(1, **figstyle.reference_style())
     figstyle.french_ticks(freq, "y")
     freq.set(xlabel="scaling_cur_freq après la mesure (MHz)",
-             ylabel="Coût / médiane du binaire")
-    freq.legend()
-    figstyle.panel_title(freq, "d", "Fréquence et coût, n = 65 536")
+             ylabel="Coût normalisé (médiane du binaire = 1)")
+    low, high = freq.get_ylim()
+    freq.set_ylim(low, high + 0.35 * (high - low))   # bandeau libre pour la légende, sans données
+    freq.legend(ncols=4)
+    figstyle.panel_title(freq, "d", "Fréquence et coût, $n$ = 65 536")
     figstyle.save(figure, path)
 
 

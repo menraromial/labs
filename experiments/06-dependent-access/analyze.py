@@ -237,7 +237,7 @@ def size_axis(axis, sizes):
     ticks = [s for s in sizes if int(np.log2(s)) % 4 == 0]
     axis.set_xticks(ticks, [size_label(s) for s in ticks])
     axis.xaxis.set_minor_locator(NullLocator())
-    axis.set_xlabel("Taille des données")
+    axis.set_xlabel(r"Taille des données $S$")
 
 
 def readable_log_axis(axis, *groups):
@@ -269,7 +269,7 @@ def plot_latency(curves, sizes, path):
                           marker=figstyle.MARKERS[i], markersize=2.4)
         size_axis(axis, sizes)
         readable_log_axis(axis, *everything)
-        axis.set_ylabel("Coût par accès (ns)")
+        axis.set_ylabel(r"Coût par accès $c$ (ns)")
         handles = [Line2D([], [], color=figstyle.PALETTE[(0, 1, 3)[i]], marker=figstyle.MARKERS[i],
                           markersize=2.4, label=ACCESS_LABELS[label]) for i, label in enumerate(ACCESS)]
         handles += [Line2D([], [], color=figstyle.INK, linestyle=PAGE_STYLE[p], label=PAGE_LABELS[p]) for p in PAGES]
@@ -289,7 +289,7 @@ def plot_overlap_tlb(overlap, page_ratio, attribution, sizes, path):
     over.axhline(1, **figstyle.reference_style())
     size_axis(over, sizes)
     readable_log_axis(over, *[m[:, 1:] for m in overlap.values()], [1])
-    over.set_ylabel("Dépendants / indépendants")
+    over.set_ylabel(r"$c_\mathrm{dep}/c_\mathrm{ind}$")
     over.legend()
     figstyle.panel_title(over, "a", "Recouvrement des défauts de cache")
 
@@ -305,7 +305,7 @@ def plot_overlap_tlb(overlap, page_ratio, attribution, sizes, path):
         axis.axhline(1, **figstyle.reference_style())
         size_axis(axis, sizes)
         readable_log_axis(axis, *[page_ratio[(c, label)][:, 1:] for c in CORES if (c, label) in page_ratio], [1])
-        axis.set_ylabel("Coût en 4 Kio / coût en 2 Mio")
+        axis.set_ylabel(r"$c_\mathrm{4K}/c_\mathrm{2M}$")
         axis.legend()
         figstyle.panel_title(axis, letter, title)
 
@@ -324,7 +324,7 @@ def plot_overlap_tlb(overlap, page_ratio, attribution, sizes, path):
     everything = np.concatenate([attribution[(c, p, "independent_random")][0] for c, p in categories])
     g_axis.set_ylim(0, everything.max() * 1.45)
     figstyle.french_ticks(g_axis, "y")
-    g_axis.set_ylabel("G = coût(16 Mio) / coût(1 Mio)")
+    g_axis.set_ylabel(r"$G = c(16\ \mathrm{Mio})\,/\,c(1\ \mathrm{Mio})$")
     g_axis.legend()
     figstyle.panel_title(g_axis, "d", "Contrôle d'attribution, accès indépendants")
     figstyle.save(figure, path)
@@ -356,7 +356,7 @@ def plot_faults(fault_values, path):
     axis.grid(axis="x", visible=False)
     axis.set_xlim(-0.6, len(categories) - 0.4)
     readable_log_axis(axis, *[v for v in fault_values.values()])
-    axis.set_ylabel("Premier accès (µs par Mio)")
+    axis.set_ylabel(r"Premier accès $t_1$ (µs par Mio)")
     axis.legend()
     axis.set_title("Coût du premier accès à une zone neuve")   # panneau unique : pas de lettre
     figstyle.save(figure, path)

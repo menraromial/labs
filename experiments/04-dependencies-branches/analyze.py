@@ -219,8 +219,8 @@ def plot_dependencies(costs, ratios, path):
         figstyle.panel_title(axis, letter, f"{COMPILER_LABELS[compiler]} : coût selon la dépendance")
 
     for axis, name, expected, letter, title in (
-            (chain, "chain/split", None, "c", "chain_xor_mul / split_xor_mul"),
-            (four, "one/four", 1, "d", "sum_one / sum_four")):
+            (chain, "chain/split", None, "c", r"$c_\mathrm{chain}/c_\mathrm{split}$"),
+            (four, "one/four", 1, "d", r"$c_\mathrm{one}/c_\mathrm{four}$")):
         done = set()
         for x, build in enumerate(BUILDS):
             per_process, center, low, high = ratios[(build, name)]
@@ -275,16 +275,16 @@ def plot_branches(curves, path):
             axis.set_xlim(-0.04, 1.04)
             figstyle.fixed_ticks(axis, "x", [0, 0.25, 0.5, 0.75, 1])
             figstyle.french_ticks(axis, "y")
-            axis.set(xlabel="Part des éléments retenus p", ylabel="Coût par élément (ns)")
+            axis.set(xlabel=r"Part des éléments retenus $p$", ylabel=r"Coût par élément $c$ (ns)")
             if column == 0:
                 axis.legend(title=COMPILER_LABELS[compiler], title_fontsize=6.5)
             if column == 1:
                 from matplotlib.lines import Line2D
                 handles = [Line2D([], [], color=figstyle.INK, marker="o", markersize=2.6, label="ordre aléatoire"),
                            Line2D([], [], color=figstyle.INK, marker="s", markerfacecolor="white",
-                                  linestyle="none", markersize=3.6, label="p = 0,5 trié"),
+                                  linestyle="none", markersize=3.6, label=r"$p$ = 0,5 trié"),
                            Line2D([], [], color=figstyle.INK, marker="x", linestyle="none",
-                                  markersize=3.6, label="p = 0,5 alterné")]
+                                  markersize=3.6, label=r"$p$ = 0,5 alterné")]
                 axis.legend(handles=handles)
             figstyle.panel_title(axis, next(letters), f"{COMPILER_LABELS[compiler]} : {titles[kernel]}")
     figstyle.save(figure, path)
@@ -307,17 +307,17 @@ def plot_small(curves, path):
         for axis in (duration, residual):
             axis.set_xscale("log", base=2)
             figstyle.fixed_ticks(axis, "x", [1, 4, 16, 64, 256, 1024])
-            axis.set_xlabel("Taille n (éléments)")
+            axis.set_xlabel(r"Taille $n$ (éléments)")
             axis.axvspan(FIT_MIN_N, 1100, color="#F2F2F2", linewidth=0, zorder=0,
                          label="Zone d'ajustement" if axis is residual else None)
         duration.set_yscale("log")
         figstyle.log_axis(duration, "y")
-        duration.set_ylabel("Durée d'un appel (ns)")
+        duration.set_ylabel(r"Durée d'un appel $T(n)$ (ns)")
         duration.legend(title=COMPILER_LABELS[compiler], title_fontsize=6.5)
         figstyle.panel_title(duration, letters[(0, column)], f"{COMPILER_LABELS[compiler]} : durée d'un appel à sum_one")
         residual.axhline(0, **figstyle.reference_style())
         figstyle.french_ticks(residual, "y")
-        residual.set_ylabel("Écart à la droite a + b n (ns)")
+        residual.set_ylabel(r"Écart $e(n)$ à $a + b\,n$ (ns)")
         residual.legend()
         figstyle.panel_title(residual, letters[(1, column)], f"{COMPILER_LABELS[compiler]} : écart au modèle linéaire")
     # Même échelle pour les deux panneaux d'écart.

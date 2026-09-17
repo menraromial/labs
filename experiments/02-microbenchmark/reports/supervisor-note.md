@@ -8,11 +8,11 @@ défendable.
 **Nous prévoyions** un coût apparent dominé par le chronomètre pour une seule
 opération, un rapport naïf entre un travail double et un travail simple écrasé
 vers 1,1 à 1,4, un biais contre la première variante mesurée, et un protocole
-entrelacé retrouvant un rapport A/A de 1 et un rapport de 2 pour le travail
-double. Nous prévoyions aussi qu'un échauffement de 10 tours suffirait.
+entrelacé retrouvant un rapport A/A (une fonction comparée à elle-même) de 1 et un
+rapport de 2 pour le travail double. Nous prévoyions aussi qu'un échauffement de 10 tours suffirait.
 
-**Nous avons mesuré** un coût fixe de chronométrage `H` ≈ 30 ns (IC 95 %
-29,4 à 31,3) et un coût par opération au plateau de 4,51 ns sur cœur P et
+**Nous avons mesuré** un coût fixe de chronométrage par échantillon (deux lectures
+d'horloge et l'appel mesuré) de $H \approx 30$ ns (IC 95 % de 29,4 à 31,3) et un coût par opération au plateau de 4,51 ns sur cœur P et
 5,51 ns sur cœur E. Le protocole naïf a donné, dans 30 processus sur 30, un rapport A/A
 médian de 0,21 : une fonction y paraît cinq fois plus lente qu'elle-même. Le
 travail double y paraît 2,5 fois plus rapide que le travail simple (rapport

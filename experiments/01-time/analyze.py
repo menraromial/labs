@@ -111,6 +111,7 @@ def plot(grouped, targets, path):
     body.set_xlim(lower, upper)
     body.set_ylim(0, 1.02)
     body.set(xlabel="Durée par lecture (ns)", ylabel="Probabilité cumulée")
+    figstyle.fixed_ticks(body, "y", (0, 0.25, 0.5, 0.75, 1))
     if hidden:
         share = figstyle.french_number(100 * hidden / single_ns.size, 2)
         noun = "valeur" if hidden == 1 else "valeurs"
@@ -183,7 +184,8 @@ def plot(grouped, targets, path):
     figstyle.log_axis(overshoot, "x")
     overshoot.set_xlim(*figstyle.decade_limits(*excesses, pad=1))
     overshoot.set_ylim(0, 1.02)
-    overshoot.set(xlabel="Dépassement de la cible (µs)", ylabel="Probabilité cumulée")
+    overshoot.set(xlabel=r"Dépassement $\delta$ (µs)", ylabel="Probabilité cumulée")
+    figstyle.fixed_ticks(overshoot, "y", (0, 0.25, 0.5, 0.75, 1))
     overshoot.legend()
     figstyle.panel_title(overshoot, "d", "Dépassement de la cible")
 

@@ -196,7 +196,7 @@ def size_axis(axis, sizes):
     ticks = [s for s in sizes if (s & (s - 1)) == 0 and int(np.log2(s)) % 4 == 0]
     axis.set_xticks(ticks, [size_label(s) for s in ticks])
     axis.xaxis.set_minor_locator(__import__("matplotlib.ticker", fromlist=["NullLocator"]).NullLocator())
-    axis.set_xlabel("Taille des données")
+    axis.set_xlabel(r"Taille des données $S$")
 
 
 def cache_marks(axis, topology_row, which=("l1_kib", "l2_kib", "l3_kib"), names=None):
@@ -224,8 +224,8 @@ def plot_patterns(result, sizes, topology, path):
     readable_log_axis(cost, *[result[("P", l)]["q25"] for l in PATTERNS],
                       *[result[("P", l)]["q75"] for l in PATTERNS])
     readable_log_axis(band, *[8 / result[("P", l)]["median"] * 1e9 / (1 << 30) for l in PATTERNS])
-    cost.set_ylabel("Coût par accès (ns)")
-    band.set_ylabel("Débit de lecture (Gio/s)")
+    cost.set_ylabel(r"Coût par accès $c$ (ns)")
+    band.set_ylabel(r"Débit de lecture $D$ (Gio/s)")
     cost.legend()
     figstyle.panel_title(cost, "a", "Coût par accès, cœur P")
     figstyle.panel_title(band, "b", "Débit de lecture, cœur P")
@@ -263,7 +263,7 @@ def plot_cores(result, sizes, split, topology, path):
     figstyle.panel_title(random_cost, "a", "Accès aléatoires selon le cœur")
     slope.axhline(SLOPE_THRESHOLD, **figstyle.reference_style())
     figstyle.french_ticks(slope, "y")
-    slope.set_ylabel(r"Pente locale $\Delta \log$ coût / $\Delta \log$ taille")
+    slope.set_ylabel(r"Pente locale $\lambda$")
     slope.legend()
     figstyle.panel_title(slope, "b", "Pente locale des accès aléatoires")
     readable_log_axis(band, *[8 / result[(c, "stride_1")]["median"] * 1e9 / (1 << 30) for c in present])
@@ -272,7 +272,7 @@ def plot_cores(result, sizes, split, topology, path):
     figstyle.panel_title(band, "c", "Débit séquentiel selon le cœur")
     lines.axhline(1, **figstyle.reference_style())
     figstyle.french_ticks(lines, "y")
-    lines.set_ylabel("Deux lignes / une ligne")
+    lines.set_ylabel(r"$c_\mathrm{split}/c_\mathrm{same}$")
     lines.legend()
     figstyle.panel_title(lines, "d", "Paire à cheval sur deux lignes de cache")
     figstyle.save(figure, path)
