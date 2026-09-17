@@ -1,0 +1,17 @@
+run_id,binary,compiler,level,cpu,seed,rounds,warmup_rounds,min_log2,max_log2,step_log2,target_log2
+1,build/bench-clang-O0,clang,O0,11,20260916,3,1,6,22,2,20
+2,build/bench-clang-O2,clang,O2,11,20260916,3,1,6,22,2,20
+3,build/bench-gcc-O0,gcc,O0,11,20260916,3,1,6,22,2,20
+4,build/bench-clang-O1,clang,O1,11,20260916,3,1,6,22,2,20
+5,build/bench-gcc-O3,gcc,O3,11,20260916,3,1,6,22,2,20
+6,build/bench-gcc-O2,gcc,O2,11,20260916,3,1,6,22,2,20
+7,build/bench-clang-O2,clang,O2,11,20260916,3,1,6,22,2,20
+8,build/bench-gcc-O1,gcc,O1,11,20260916,3,1,6,22,2,20
+9,build/bench-clang-O0,clang,O0,11,20260916,3,1,6,22,2,20
+10,build/bench-gcc-O2,gcc,O2,11,20260916,3,1,6,22,2,20
+11,build/bench-clang-O3,clang,O3,11,20260916,3,1,6,22,2,20
+12,build/bench-clang-O3,clang,O3,11,20260916,3,1,6,22,2,20
+13,build/bench-gcc-O1,gcc,O1,11,20260916,3,1,6,22,2,20
+14,build/bench-gcc-O3,gcc,O3,11,20260916,3,1,6,22,2,20
+15,build/bench-clang-O1,clang,O1,11,20260916,3,1,6,22,2,20
+16,build/bench-gcc-O0,gcc,O0,11,20260916,3,1,6,22,2,20

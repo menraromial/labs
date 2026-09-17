@@ -1,0 +1,4 @@
+run_id,core,cpu,seed,rounds,warmup_rounds,min_log2,max_log2,accesses_log2
+1,P,11,20260918,2,1,12,24,16
+2,E,19,20260918,2,1,12,24,16
+3,LP-E,21,20260918,2,1,12,24,16

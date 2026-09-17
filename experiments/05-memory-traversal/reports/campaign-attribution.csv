@@ -1,0 +1,4 @@
+core,G_16MiB_over_1MiB,G_per_process_median,G_ci95_low,G_ci95_high,cost_256MiB_over_16MiB
+P,7.799,7.897,7.386,8.333,1.621
+E,6.107,6.235,5.472,6.345,1.887
+LP-E,10.791,10.967,10.566,11.213,1.663

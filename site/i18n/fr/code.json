@@ -1,0 +1,12 @@
+{
+  "theme.SearchBar.label": {"message": "Rechercher"},
+  "theme.SearchBar.noResultsText": {"message": "Aucun résultat"},
+  "theme.SearchBar.seeAll": {"message": "Voir les {count} résultats"},
+  "theme.SearchBar.searchInContext": {"message": "Rechercher dans cette section"},
+  "theme.SearchBar.seeAllOutsideContext": {"message": "Voir les résultats hors de « {context} »"},
+  "theme.SearchPage.emptyResultsTitle": {"message": "Rechercher dans le laboratoire"},
+  "theme.SearchPage.existingResultsTitle": {"message": "Résultats pour « {query} »"},
+  "theme.SearchPage.noResultsText": {"message": "Aucun résultat"},
+  "theme.SearchPage.documentsFound.plurals": {"message": "Un document trouvé|{count} documents trouvés"},
+  "theme.SearchPage.searchContext.everywhere": {"message": "partout"}
+}

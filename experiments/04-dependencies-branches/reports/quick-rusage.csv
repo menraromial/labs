@@ -1,0 +1,7 @@
+build,processes,max_involuntary_switches,max_minor_faults
+gcc-scalar,2,2,2
+gcc-O2,2,1,2
+gcc-O3-v3,2,0,2
+clang-scalar,2,1,2
+clang-O2,2,1,2
+clang-O3-v3,2,1,2

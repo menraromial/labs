@@ -1,0 +1,13 @@
+protocol,mode,prime,run_id,seed,affinity,allowed_cpus,warmup_ops,warmup_rounds,sample,round,phase,position,variant,ops,calls_per_op,elapsed_ns,cpu_before,cpu_after,result
+interleaved,interleaved,none,6,20260922,E,1,0,1,0,0,warmup,0,A_bis,50,1,417,19,19,444918080473383841
+interleaved,interleaved,none,6,20260922,E,1,0,1,1,0,warmup,1,A,50,1,300,19,19,7956928354020863926
+interleaved,interleaved,none,6,20260922,E,1,0,1,2,0,warmup,2,B,50,2,619,19,19,7464803187790278073
+interleaved,interleaved,none,6,20260922,E,1,0,1,3,1,measure,0,B,50,2,572,19,19,14269381667092496217
+interleaved,interleaved,none,6,20260922,E,1,0,1,4,1,measure,1,A_bis,50,1,308,19,19,10794820451065142327
+interleaved,interleaved,none,6,20260922,E,1,0,1,5,1,measure,2,A,50,1,307,19,19,11049700440823600711
+interleaved,interleaved,none,6,20260922,E,1,0,1,6,2,measure,0,B,50,2,584,19,19,13825879702425869883
+interleaved,interleaved,none,6,20260922,E,1,0,1,7,2,measure,1,A,50,1,296,19,19,18437901190156997975
+interleaved,interleaved,none,6,20260922,E,1,0,1,8,2,measure,2,A_bis,50,1,306,19,19,151455748573796984
+interleaved,interleaved,none,6,20260922,E,1,0,1,9,3,measure,0,A,50,1,307,19,19,15251617079413110098
+interleaved,interleaved,none,6,20260922,E,1,0,1,10,3,measure,1,B,50,2,583,19,19,1718961493441962783
+interleaved,interleaved,none,6,20260922,E,1,0,1,11,3,measure,2,A_bis,50,1,296,19,19,8201461653112158835

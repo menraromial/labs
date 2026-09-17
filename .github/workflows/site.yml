@@ -1,0 +1,67 @@
+# Publie le site du laboratoire sur GitHub Pages à chaque modification du dépôt.
+# Adresse : https://menraromial.com/<nom du dépôt>/ (domaine hérité du dépôt
+# menraromial.github.io).
+
+name: Site du laboratoire
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'experiments/**'
+      - 'docs/**'
+      - 'tools/**'
+      - 'README.md'
+      - 'STYLE_FIGURES.md'
+      - 'site/**'
+      - '.github/workflows/site.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # Historique complet : les dates « mis à jour le » viennent des commits.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Installer les dépendances
+        working-directory: site
+        run: npm ci
+
+      - name: Générer le site
+        working-directory: site
+        env:
+          SITE_URL: https://menraromial.com
+          BASE_URL: /${{ github.event.repository.name }}/
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site/build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

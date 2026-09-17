@@ -1,0 +1,13 @@
+run_id,binary,build,cpu,seed,rounds,warmup_rounds,calls_shift
+1,build/bench-gcc-O3-v3,gcc-O3-v3,11,20260917,4,1,2
+2,build/bench-clang-scalar,clang-scalar,11,20260917,4,1,2
+3,build/bench-clang-scalar,clang-scalar,11,20260917,4,1,2
+4,build/bench-clang-O2,clang-O2,11,20260917,4,1,2
+5,build/bench-clang-O3-v3,clang-O3-v3,11,20260917,4,1,2
+6,build/bench-gcc-scalar,gcc-scalar,11,20260917,4,1,2
+7,build/bench-gcc-scalar,gcc-scalar,11,20260917,4,1,2
+8,build/bench-gcc-O2,gcc-O2,11,20260917,4,1,2
+9,build/bench-clang-O3-v3,clang-O3-v3,11,20260917,4,1,2
+10,build/bench-gcc-O3-v3,gcc-O3-v3,11,20260917,4,1,2
+11,build/bench-gcc-O2,gcc-O2,11,20260917,4,1,2
+12,build/bench-clang-O2,clang-O2,11,20260917,4,1,2

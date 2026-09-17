@@ -1,0 +1,5 @@
+protocol,prime,processes,first_sample_off_P,reached_P_later,never_on_P,median_ms_before_first_P,max_ms_before_first_P,migrated_samples,median_involuntary_switches,max_involuntary_switches,max_minor_faults
+naive,clock,30,29,0,29,,,0,0.0,0,0
+naive,code,30,25,0,25,,,0,0.0,0,2
+naive,full,30,27,0,27,,,0,0.0,0,0
+naive,none,30,27,0,27,,,0,0.0,0,2

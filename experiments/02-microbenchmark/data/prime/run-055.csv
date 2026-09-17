@@ -1,0 +1,4 @@
+protocol,mode,prime,run_id,seed,affinity,allowed_cpus,warmup_ops,warmup_rounds,sample,round,phase,position,variant,ops,calls_per_op,elapsed_ns,cpu_before,cpu_after,result
+naive,fixed,none,55,20260971,libre,22,0,0,0,0,measure,0,A,1,1,187,17,17,16953830338549535282
+naive,fixed,none,55,20260971,libre,22,0,0,1,0,measure,1,A_bis,1,1,37,17,17,5812523309255484684
+naive,fixed,none,55,20260971,libre,22,0,0,2,0,measure,2,B,1,2,59,17,17,13076066608253460071

@@ -1,0 +1,5 @@
+prime,processes,median_ns_A,ci95_low_ns_A,ci95_high_ns_A,median_ns_A_bis,ci95_low_ns_A_bis,ci95_high_ns_A_bis,median_ns_B,ci95_low_ns_B,ci95_high_ns_B
+none,30,181.0,170.0,188.0,36.0,35.0,39.0,70.5,69.0,77.5
+clock,30,98.5,96.0,107.0,38.5,36.0,41.5,74.0,70.0,76.5
+code,30,152.5,144.5,168.5,36.0,35.0,37.0,57.0,55.5,61.0
+full,30,43.0,42.0,44.0,36.0,35.5,37.0,47.0,46.0,47.0

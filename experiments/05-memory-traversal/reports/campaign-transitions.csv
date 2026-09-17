@@ -1,0 +1,7 @@
+core,from,to,peak,peak_slope
+P,1 Mio,24 Mio,6 Mio,1.115
+E,1 Mio,48 Mio,12 Mio,0.991
+E,96 Mio,96 Mio,96 Mio,0.209
+LP-E,512 Kio,3 Mio,"1,5 Mio",2.536
+LP-E,8 Mio,8 Mio,8 Mio,0.205
+LP-E,128 Mio,192 Mio,192 Mio,0.339

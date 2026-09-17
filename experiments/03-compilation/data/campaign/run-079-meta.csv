@@ -1,0 +1,2 @@
+run_id,level,compiler,first_cpu,frequency_before_khz,frequency_after_khz,minor_faults,major_faults,voluntary_switches,involuntary_switches,mismatches
+79,gcc-O2,"15.2.0",11,2400048,2462032,2,0,0,25,0

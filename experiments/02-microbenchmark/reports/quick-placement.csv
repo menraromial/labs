@@ -1,0 +1,5 @@
+protocol,prime,processes,first_sample_off_P,reached_P_later,never_on_P,median_ms_before_first_P,max_ms_before_first_P,migrated_samples,median_involuntary_switches,max_involuntary_switches,max_minor_faults
+amortization,none,3,2,0,2,,,0,0.0,1,2
+batched,none,5,5,0,5,,,0,0.0,0,2
+interleaved,none,5,4,4,0,4.05,5.44,4,1.0,3,2
+naive,none,5,3,0,3,,,0,0.0,0,2

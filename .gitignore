@@ -1,0 +1,11 @@
+# Binaires et caches recompilés par `make` dans chaque expérience
+experiments/*/build/
+__pycache__/
+
+# Site : dépendances et fichiers générés (voir aussi site/.gitignore)
+site/node_modules/
+site/build/
+site/.docusaurus/
+
+# Réglages locaux de Claude Code
+.claude/settings.local.json

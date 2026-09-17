@@ -1,0 +1,9 @@
+node_modules/
+build/
+.docusaurus/
+.cache-loader/
+
+# Contenu généré par scripts/sync-content.mjs à partir de ../experiments et ../docs
+docs/
+src/data/
+static/generated/

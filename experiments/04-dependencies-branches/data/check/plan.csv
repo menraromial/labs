@@ -1,0 +1,7 @@
+run_id,binary,build,cpu,seed,rounds,warmup_rounds,calls_shift
+1,build/bench-clang-scalar,clang-scalar,11,20260917,2,1,6
+2,build/bench-gcc-scalar,gcc-scalar,11,20260917,2,1,6
+3,build/bench-clang-O3-v3,clang-O3-v3,11,20260917,2,1,6
+4,build/bench-gcc-O3-v3,gcc-O3-v3,11,20260917,2,1,6
+5,build/bench-gcc-O2,gcc-O2,11,20260917,2,1,6
+6,build/bench-clang-O2,clang-O2,11,20260917,2,1,6

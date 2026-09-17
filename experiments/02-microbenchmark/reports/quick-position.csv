@@ -1,0 +1,4 @@
+position,processes,median_normalized_cost,ci95_low,ci95_high
+1,5,1.0000,1.0000,1.0000
+2,5,1.0000,1.0000,1.0000
+3,5,1.0000,0.9999,1.0000

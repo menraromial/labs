@@ -1,0 +1,9 @@
+protocol,mode,prime,run_id,seed,affinity,allowed_cpus,warmup_ops,warmup_rounds,sample,round,phase,position,variant,ops,calls_per_op,elapsed_ns,cpu_before,cpu_after,result
+amortization,amortization,none,10,20260926,libre,22,10,0,0,1,measure,0,A,2,1,161,19,19,2427589857750043420
+amortization,amortization,none,10,20260926,libre,22,10,0,1,1,measure,0,A,8,1,69,19,19,16465060083131571277
+amortization,amortization,none,10,20260926,libre,22,10,0,2,0,measure,0,A,4,1,46,19,19,309788790432035710
+amortization,amortization,none,10,20260926,libre,22,10,0,3,1,measure,0,A,4,1,42,19,19,15375632393899731511
+amortization,amortization,none,10,20260926,libre,22,10,0,4,0,measure,0,A,2,1,41,19,19,5104714009917578732
+amortization,amortization,none,10,20260926,libre,22,10,0,5,1,measure,0,A,1,1,42,19,19,5205498855451485422
+amortization,amortization,none,10,20260926,libre,22,10,0,6,0,measure,0,A,1,1,37,19,19,240981343426773876
+amortization,amortization,none,10,20260926,libre,22,10,0,7,0,measure,0,A,8,1,100,19,19,9209781849312436584

@@ -1,0 +1,232 @@
+/*
+ * Thème du site : sobre, fond blanc, une seule couleur d'accent (bleu nuit),
+ * Calibri (ou Carlito, métriquement compatible) pour tout le texte.
+ */
+
+:root {
+  --lab-accent: #1f3864;
+  --lab-accent-soft: #e8edf5;
+  --lab-text: #212121;
+  --lab-muted: #5f6368;
+  --lab-rule: #d9d9d9;
+  --lab-row: #f5f5f5;
+  --lab-surface: #ffffff;
+
+  --ifm-color-primary: #1f3864;
+  --ifm-color-primary-dark: #1c325a;
+  --ifm-color-primary-darker: #1a3055;
+  --ifm-color-primary-darkest: #152746;
+  --ifm-color-primary-light: #223e6e;
+  --ifm-color-primary-lighter: #244073;
+  --ifm-color-primary-lightest: #2b4c88;
+
+  --ifm-font-family-base: Calibri, Carlito, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-font-family-monospace: 'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace;
+  --ifm-font-size-base: 112.5%;
+  --ifm-line-height-base: 1.5;
+  --ifm-code-font-size: 86%;
+  --ifm-font-color-base: var(--lab-text);
+  --ifm-heading-color: var(--lab-accent);
+  --ifm-background-color: var(--lab-surface);
+  --ifm-toc-border-color: var(--lab-rule);
+  --ifm-table-border-color: var(--lab-rule);
+  --ifm-table-stripe-background: var(--lab-row);
+  --ifm-table-head-background: transparent;
+  --ifm-hr-border-color: var(--lab-rule);
+  --ifm-navbar-shadow: none;
+  --ifm-global-shadow-lw: none;
+  --docusaurus-highlighted-code-line-bg: rgba(31, 56, 100, 0.08);
+}
+
+[data-theme='dark'] {
+  --lab-accent: #9db5dd;
+  --lab-accent-soft: #1d2533;
+  --lab-text: #e3e3e3;
+  --lab-muted: #a8adb4;
+  --lab-rule: #3a3d42;
+  --lab-row: #1f2124;
+  --lab-surface: #151617;
+
+  --ifm-color-primary: #9db5dd;
+  --ifm-color-primary-dark: #85a3d4;
+  --ifm-color-primary-darker: #7999cf;
+  --ifm-color-primary-darkest: #537cbf;
+  --ifm-color-primary-light: #b5c7e6;
+  --ifm-color-primary-lighter: #c1d0ea;
+  --ifm-color-primary-lightest: #e5ebf6;
+  --docusaurus-highlighted-code-line-bg: rgba(157, 181, 221, 0.12);
+}
+
+body {
+  background: var(--lab-surface);
+  font-kerning: normal;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--lab-rule);
+}
+
+.navbar__title {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* ------------------------------------------------------------------ */
+/* Article                                                             */
+
+.theme-doc-markdown {
+  max-width: 50rem;
+}
+
+.theme-doc-markdown h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.theme-doc-markdown h2 {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--lab-rule);
+}
+
+.theme-doc-markdown h3 {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 1.8rem;
+}
+
+.theme-doc-markdown p,
+.theme-doc-markdown li {
+  hyphens: auto;
+}
+
+.theme-doc-markdown strong {
+  color: inherit;
+}
+
+/* Tableaux : filets fins gris, lignes alternées. */
+.theme-doc-markdown table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92em;
+  margin: 1.2rem 0 1.6rem;
+}
+
+.theme-doc-markdown table thead tr {
+  border-bottom: 1.5px solid var(--lab-accent);
+}
+
+.theme-doc-markdown table th {
+  font-weight: 700;
+  color: var(--lab-accent);
+  text-align: left;
+}
+
+.theme-doc-markdown table tr {
+  border-top: 0;
+}
+
+.theme-doc-markdown table th,
+.theme-doc-markdown table td {
+  border: 0;
+  border-bottom: 0.5px solid var(--lab-rule);
+  padding: 0.4rem 0.7rem;
+  vertical-align: top;
+}
+
+.theme-doc-markdown table tr:nth-child(2n) {
+  background: var(--lab-row);
+}
+
+@media (max-width: 996px) {
+  .theme-doc-markdown table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+/* Figures numérotées automatiquement. */
+.theme-doc-markdown {
+  counter-reset: lab-figure;
+}
+
+.lab-figure {
+  counter-increment: lab-figure;
+  margin: 1.8rem 0;
+  text-align: center;
+}
+
+.lab-figure img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  background: #ffffff;
+  border: 0.5px solid var(--lab-rule);
+  padding: 0.5rem;
+}
+
+.lab-figure figcaption {
+  margin: 0.6rem auto 0;
+  max-width: 44rem;
+  font-size: 0.85em;
+  font-style: italic;
+  color: var(--lab-muted);
+  text-align: left;
+}
+
+.lab-figure figcaption::before {
+  content: 'Figure ' counter(lab-figure) '. ';
+  font-style: normal;
+  font-weight: 700;
+  color: var(--lab-text);
+}
+
+/* Encadré d'en-tête des comptes rendus. */
+.theme-doc-markdown .theme-admonition-info {
+  --ifm-alert-background-color: var(--lab-accent-soft);
+  --ifm-alert-border-color: var(--lab-accent);
+  --ifm-alert-foreground-color: var(--lab-text);
+  font-size: 0.92em;
+}
+
+.alert {
+  box-shadow: none;
+  border-radius: 2px;
+}
+
+code {
+  border: 0;
+  background: var(--lab-row);
+}
+
+.theme-code-block {
+  border: 0.5px solid var(--lab-rule);
+  box-shadow: none;
+}
+
+.menu__link {
+  font-size: 0.95rem;
+}
+
+.table-of-contents__link--active {
+  font-weight: 700;
+}
+
+@media print {
+  .navbar,
+  .theme-doc-sidebar-container,
+  .theme-doc-toc-desktop,
+  .theme-doc-footer,
+  .pagination-nav,
+  .footer {
+    display: none !important;
+  }
+
+  .theme-doc-markdown {
+    max-width: none;
+  }
+}

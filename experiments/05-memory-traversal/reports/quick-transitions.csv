@@ -1,0 +1,14 @@
+core,from,to,peak,peak_slope
+P,12 Kio,12 Kio,12 Kio,1.222
+P,128 Kio,192 Kio,128 Kio,0.454
+P,384 Kio,768 Kio,512 Kio,0.366
+P,"1,5 Mio",4 Mio,"1,5 Mio",1.088
+P,8 Mio,12 Mio,8 Mio,0.973
+E,384 Kio,384 Kio,384 Kio,0.590
+E,1 Mio,4 Mio,3 Mio,1.675
+E,8 Mio,12 Mio,8 Mio,1.005
+LP-E,64 Kio,64 Kio,64 Kio,0.392
+LP-E,128 Kio,192 Kio,192 Kio,0.806
+LP-E,512 Kio,"1,5 Mio",512 Kio,1.975
+LP-E,3 Mio,4 Mio,3 Mio,0.374
+LP-E,8 Mio,12 Mio,8 Mio,0.338

@@ -1,0 +1,33 @@
+{
+  "name": "labs-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site académique du laboratoire Linux : systèmes, performance et distribué",
+  "scripts": {
+    "sync": "node scripts/sync-content.mjs",
+    "start": "node scripts/sync-content.mjs --watch -- docusaurus start",
+    "build": "node scripts/sync-content.mjs && docusaurus build",
+    "serve": "docusaurus serve",
+    "clear": "docusaurus clear"
+  },
+  "engines": {
+    "node": ">=20.0"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@docusaurus/theme-mermaid": "3.10.2",
+    "@easyops-cn/docusaurus-search-local": "0.55.3",
+    "@fontsource/carlito": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@mdx-js/react": "3.1.1",
+    "@mermaid-js/layout-elk": "0.1.9",
+    "clsx": "2.1.1",
+    "katex": "0.16.47",
+    "prism-react-renderer": "2.4.1",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "rehype-katex": "7.0.1",
+    "remark-math": "6.0.0"
+  }
+}

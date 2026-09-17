@@ -1,0 +1,5 @@
+affinity,processes,median_ns_per_op_A,ci95_low,ci95_high,between_process_relative_iqr,median_within_process_relative_iqr,median_B_over_A,core_types
+libre,5,4.5117,4.5111,4.7487,0.0001,0.0267,1.9996,P:5
+P,2,4.5113,4.5108,4.5118,0.0001,0.0243,1.9998,P:2
+E,2,5.5136,5.5136,5.5137,0.0000,0.0002,1.9998,E:2
+LP-E,2,10.0269,10.0268,10.0270,0.0000,0.0008,2.0008,LP-E:2

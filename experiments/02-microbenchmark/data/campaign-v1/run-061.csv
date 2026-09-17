@@ -1,0 +1,4 @@
+protocol,mode,run_id,seed,affinity,allowed_cpus,warmup_ops,warmup_rounds,sample,round,phase,position,variant,ops,calls_per_op,elapsed_ns,cpu_before,cpu_after,result
+batched,fixed,61,20260977,libre,22,0,0,0,0,measure,0,A,20000,1,110419,13,13,9068974388893931277
+batched,fixed,61,20260977,libre,22,0,0,1,0,measure,1,A_bis,20000,1,110272,13,13,9273801406613532823
+batched,fixed,61,20260977,libre,22,0,0,2,0,measure,2,B,20000,2,220533,13,13,4283702067523227809

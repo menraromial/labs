@@ -1,0 +1,247 @@
+.hero {
+  padding: 3.5rem 0 3rem;
+  border-bottom: 1px solid var(--lab-rule);
+}
+
+.kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lab-muted);
+}
+
+.title {
+  max-width: 40rem;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  color: var(--lab-accent);
+}
+
+.lead {
+  max-width: 44rem;
+  font-size: 1.15rem;
+  color: var(--lab-text);
+}
+
+.method {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0;
+  margin: 1.8rem 0 2rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: method;
+}
+
+.method li {
+  counter-increment: method;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--lab-text);
+}
+
+.method li::before {
+  content: counter(method);
+  display: inline-grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.4rem;
+  border: 1px solid var(--lab-accent);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--lab-accent);
+}
+
+.method li:not(:last-child)::after {
+  content: '';
+  width: 1.2rem;
+  height: 1px;
+  margin: 0 0.5rem;
+  background: var(--lab-rule);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.section {
+  padding: 3rem 0 1rem;
+}
+
+.sectionHead {
+  margin-bottom: 1.5rem;
+}
+
+.sectionHead h2 {
+  margin-bottom: 0.3rem;
+  font-size: 1.6rem;
+}
+
+.sectionHead p {
+  margin: 0;
+  color: var(--lab-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 21rem), 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--lab-rule);
+  border-radius: 3px;
+  background: var(--lab-surface);
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--lab-accent);
+}
+
+.thumbnail {
+  display: block;
+  height: 13rem;
+  overflow: hidden;
+  padding: 0.6rem;
+  background: #ffffff;
+  border-bottom: 1px solid var(--lab-rule);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardBody {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem 1.2rem 1.1rem;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.code {
+  padding: 0.05rem 0.45rem;
+  border-radius: 2px;
+  background: var(--lab-accent);
+  color: var(--lab-surface);
+  font-weight: 700;
+}
+
+.status-campagne,
+.status-mise-au-point,
+.status-protocole {
+  color: var(--lab-muted);
+}
+
+.status-campagne::before,
+.status-mise-au-point::before,
+.status-protocole::before {
+  content: '';
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.35rem;
+  border-radius: 50%;
+  border: 1px solid var(--lab-accent);
+}
+
+.status-campagne::before {
+  background: var(--lab-accent);
+}
+
+.status-mise-au-point::before {
+  background: linear-gradient(90deg, var(--lab-accent) 50%, transparent 50%);
+}
+
+.cardTitle {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.cardTitle a {
+  color: var(--lab-accent);
+}
+
+.question {
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cardLinks {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  font-size: 0.92rem;
+}
+
+.updated {
+  margin: 0.6rem 0 0;
+  font-size: 0.8rem;
+  color: var(--lab-muted);
+}
+
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem 1.5rem;
+  margin: 0 0 3rem;
+  padding: 0;
+  list-style: none;
+}
+
+.roadmapGroup {
+  display: flex;
+  gap: 0.8rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--lab-rule);
+}
+
+.roadmapLetter {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--lab-accent);
+}
+
+.roadmapGroup ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.93rem;
+}
+
+.stepDone a {
+  color: var(--lab-accent);
+}
+
+.stepTodo {
+  color: var(--lab-muted);
+}

@@ -1,0 +1,12 @@
+run_id,protocol,mode,affinity,cpu,seed,batch,rounds,warmup_rounds,max_batch,warmup_ops,prime
+1,naive,fixed,libre,,20260917,1,1,0,,0,none
+2,interleaved,interleaved,P,11,20260918,50,4,1,,0,none
+3,interleaved,interleaved,libre,,20260919,50,4,1,,0,none
+4,naive,fixed,libre,,20260920,1,1,0,,0,none
+5,naive,fixed,libre,,20260921,1,1,0,,0,code
+6,interleaved,interleaved,E,19,20260922,50,4,1,,0,none
+7,naive,fixed,libre,,20260923,1,1,0,,0,clock
+8,batched,fixed,libre,,20260924,50,1,0,,0,none
+9,interleaved,interleaved,LP-E,21,20260925,50,4,1,,0,none
+10,amortization,amortization,libre,,20260926,,2,0,8,10,none
+11,naive,fixed,libre,,20260927,1,1,0,,0,full

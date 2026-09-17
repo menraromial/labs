@@ -1,0 +1,101 @@
+2026-09-17T09:26:32+02:00
+Linux pl-dapi-na-salsa-004 7.0.0-31-generic #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Aug  1 04:26:38 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+Architecture :                            x86_64
+Mode(s) opératoire(s) des processeurs :   32-bit, 64-bit
+Tailles des adresses:                     46 bits physical, 48 bits virtual
+Boutisme :                                Little Endian
+Processeur(s) :                           22
+Liste de processeur(s) en ligne :         0-21
+Identifiant constructeur :                GenuineIntel
+Nom de modèle :                           Intel(R) Core(TM) Ultra 7 165H
+Famille de processeur :                   6
+Modèle :                                  170
+Thread(s) par cœur :                      2
+Cœur(s) par socket :                      16
+Socket(s) :                               1
+Révision :                                4
+multiplication des MHz du/des CPU(s) :    29%
+Vitesse maximale du processeur en MHz :   5000,0000
+Vitesse minimale du processeur en MHz :   400,0000
+BogoMIPS :                                6144,00
+Drapeaux :                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid bus_lock_detect movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities
+Virtualisation :                          VT-x
+Cache L1d :                               544 KiB (14 instances)
+Cache L1i :                               896 KiB (14 instances)
+Cache L2 :                                18 MiB (9 instances)
+Cache L3 :                                24 MiB (1 instance)
+Nœud(s) NUMA :                            1
+Nœud NUMA 0 de processeur(s) :            0-21
+Vulnérabilité Gather data sampling :      Not affected
+Vulnérabilité Ghostwrite :                Not affected
+Vulnérabilité Indirect target selection : Not affected
+Vulnérabilité Itlb multihit :             Not affected
+Vulnérabilité L1tf :                      Not affected
+Vulnérabilité Mds :                       Not affected
+Vulnérabilité Meltdown :                  Not affected
+Vulnérabilité Mmio stale data :           Not affected
+Vulnérabilité Old microcode :             Not affected
+Vulnérabilité Reg file data sampling :    Not affected
+Vulnérabilité Retbleed :                  Not affected
+Vulnérabilité Spec rstack overflow :      Not affected
+Vulnérabilité Spec store bypass :         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnérabilité Spectre v1 :                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnérabilité Spectre v2 :                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS Not affected; BHI BHI_DIS_S
+Vulnérabilité Srbds :                     Not affected
+Vulnérabilité Tsa :                       Not affected
+Vulnérabilité Tsx async abort :           Not affected
+Vulnérabilité Vmscape :                   Mitigation; IBPB before exit to userspace
+CPU CORE L1d:L1i:L2:L3    MAXMHZ
+  0    0 16:16:4:0     4700,0000
+  1    1 8:8:2:0       5000,0000
+  2    1 8:8:2:0       5000,0000
+  3    2 12:12:3:0     5000,0000
+  4    2 12:12:3:0     5000,0000
+  5    0 16:16:4:0     4700,0000
+  6    3 20:20:5:0     4700,0000
+  7    3 20:20:5:0     4700,0000
+  8    4 24:24:6:0     4700,0000
+  9    4 24:24:6:0     4700,0000
+ 10    5 28:28:7:0     4700,0000
+ 11    5 28:28:7:0     4700,0000
+ 12    6 0:0:0:0       3800,0000
+ 13    7 2:2:0:0       3800,0000
+ 14    8 4:4:0:0       3800,0000
+ 15    9 6:6:0:0       3800,0000
+ 16   10 1:0           3800,0000
+ 17   11 10:10:1:0     3800,0000
+ 18   12 1:0           3800,0000
+ 19   13 14:14:1:0     3800,0000
+ 20   14 64:64:8       2500,0000
+ 21   15 66:66:8       2500,0000
+               total       utilisé      libre     partagé tamp/cache   disponible
+Mem:            14Gi       9,8Gi       1,3Gi       1,8Gi       5,7Gi       4,7Gi
+Échange:          0B          0B          0B
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+Ubuntu clang version 21.1.8 (6ubuntu1)
+GNU objdump (GNU Binutils for Ubuntu) 2.46
+Python 3.14.4
+cpu_core=0-11
+cpu_atom=12-21
+scaling_driver=intel_pstate
+scaling_governor=powersave
+energy_performance_preference=power
+clocksource=tsc
+perf_event_paranoid=4
+loadavg=0.50 1.29 1.49 2/2770 1622274
+none
+options de compilation :
+sources et binaires :
+ace5060ec6ade2a3b8ee7cc6ee8988be09e1f2e3f8f3ba61fba44e6aa5d12372  src/kernels.c
+6010e7e7183da31a477a7893c6082b6487943f0baa499e0de2ed4cb6cd3af9e9  src/kernels.h
+2b33ddb320341a4ade04a7d94c7077cf230acea3cc01e32dcbd8e3000780183c  src/harness.c
+24659cdb96ba5cf794862aaf8d43e410f84a46517f8bef4e67a11cd0f7bfda3b  build/bench-clang-O2
+8481d3aa1ade0fa9aa4cd08cfc7158a663961cd89db96da1a76f8af8f25f0789  build/bench-clang-O3-v3
+4514fa98cb51621bc3470bff4d7e625a0e87bbe21c34e06fff8c670429c7d718  build/bench-clang-scalar
+03a4a3317bb034fe1e6c90d2c8aaa4f1469502f2762fdc2a85baa245562eb172  build/bench-gcc-O2
+adce600f1cdacf68b59a361cf9a46dde84f8041589ea705e763f944fe1a73d2c  build/bench-gcc-O3-v3
+17e30df98375bd1f13872f55cccce16d9e20daf274928e695b43b24f62227173  build/bench-gcc-scalar

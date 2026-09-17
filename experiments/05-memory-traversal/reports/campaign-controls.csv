@@ -1,0 +1,4 @@
+core,processes,aa_median,aa_ci95_low,aa_ci95_high,aa_min,aa_max,double_median,double_ci95_low,double_ci95_high,double_min,double_max,max_minor_faults,max_involuntary_switches
+P,8,0.9985,0.9822,1.0302,0.9795,1.0342,1.9851,1.9761,2.0062,1.9533,2.0160,3,221
+E,8,0.9997,0.9992,1.0002,0.9978,1.0010,1.9990,1.9908,2.0030,1.9899,2.0053,7,487
+LP-E,8,1.0016,0.9976,1.0067,0.9972,1.0068,2.0031,1.9885,2.0097,1.9859,2.0149,12,1355

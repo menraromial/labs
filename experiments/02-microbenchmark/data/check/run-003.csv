@@ -1,0 +1,13 @@
+protocol,mode,prime,run_id,seed,affinity,allowed_cpus,warmup_ops,warmup_rounds,sample,round,phase,position,variant,ops,calls_per_op,elapsed_ns,cpu_before,cpu_after,result
+interleaved,interleaved,none,3,20260919,libre,22,0,1,0,0,warmup,0,A_bis,50,1,440,14,14,7393704932125986075
+interleaved,interleaved,none,3,20260919,libre,22,0,1,1,0,warmup,1,B,50,2,638,14,14,3481878872529208070
+interleaved,interleaved,none,3,20260919,libre,22,0,1,2,0,warmup,2,A,50,1,324,14,14,17012862811211188641
+interleaved,interleaved,none,3,20260919,libre,22,0,1,3,1,measure,0,B,50,2,602,14,14,7819825092915276460
+interleaved,interleaved,none,3,20260919,libre,22,0,1,4,1,measure,1,A,50,1,313,14,14,6783898364018829249
+interleaved,interleaved,none,3,20260919,libre,22,0,1,5,1,measure,2,A_bis,50,1,324,14,14,2180766493075784228
+interleaved,interleaved,none,3,20260919,libre,22,0,1,6,2,measure,0,A,50,1,324,14,14,1004710973445620810
+interleaved,interleaved,none,3,20260919,libre,22,0,1,7,2,measure,1,B,50,2,602,14,14,13595409398115708985
+interleaved,interleaved,none,3,20260919,libre,22,0,1,8,2,measure,2,A_bis,50,1,312,14,14,13987992370809255701
+interleaved,interleaved,none,3,20260919,libre,22,0,1,9,3,measure,0,B,50,2,602,14,14,7503077093257938269
+interleaved,interleaved,none,3,20260919,libre,22,0,1,10,3,measure,1,A,50,1,311,14,14,5790035133507304597
+interleaved,interleaved,none,3,20260919,libre,22,0,1,11,3,measure,2,A_bis,50,1,323,14,14,13144675203995679039
