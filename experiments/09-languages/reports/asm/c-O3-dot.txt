@@ -1,0 +1,27 @@
+    2200:	mov    rcx,rdx
+    2203:	xor    eax,eax
+    2205:	pxor   xmm0,xmm0
+    2209:	shr    rcx,1
+    220c:	shl    rcx,0x4
+    2210:	nop    DWORD PTR [rax+0x0]
+    2214:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    221f:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    222a:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    2235:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    2240:	movupd xmm1,XMMWORD PTR [rdi+rax*1]
+    2245:	movupd xmm3,XMMWORD PTR [rsi+rax*1]
+    224a:	add    rax,0x10
+    224e:	mulpd  xmm1,xmm3
+    2252:	addsd  xmm0,xmm1
+    2256:	unpckhpd xmm1,xmm1
+    225a:	addsd  xmm0,xmm1
+    225e:	cmp    rax,rcx
+    2261:	jne    2240 <dot+0x40>
+    2263:	test   dl,0x1
+    2266:	je     227a <dot+0x7a>
+    2268:	and    rdx,0xfffffffffffffffe
+    226c:	movsd  xmm1,QWORD PTR [rsi+rdx*8]
+    2271:	mulsd  xmm1,QWORD PTR [rdi+rdx*8]
+    2276:	addsd  xmm0,xmm1
+    227a:	ret
+    227b:	nop    DWORD PTR [rax+rax*1+0x0]

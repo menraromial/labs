@@ -1,0 +1,11 @@
+workload,ratio,median,ci95_low,ci95_high
+hash_chain,java-2cpu/java excess,0.300,0.300,0.300
+hash_chain,node-2cpu/node excess,0.967,0.967,0.967
+hash_chain,java-2cpu/java steady,1.002,1.002,1.002
+hash_chain,node-2cpu/node steady,0.987,0.987,0.987
+hash_chain,python-jit/python steady,0.933,0.933,0.933
+dot,java-2cpu/java excess,3.346,3.346,3.346
+dot,node-2cpu/node excess,0.389,0.389,0.389
+dot,java-2cpu/java steady,1.062,1.062,1.062
+dot,node-2cpu/node steady,0.951,0.951,0.951
+dot,python-jit/python steady,0.931,0.931,0.931

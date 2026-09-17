@@ -1,0 +1,56 @@
+  4afd40:	cmp    rsp,QWORD PTR [r14+0x10]
+  4afd44:	jbe    4afda4 <main.countMap+0x64>
+  4afd46:	push   rbp
+  4afd47:	mov    rbp,rsp
+  4afd4a:	sub    rsp,0x28
+  4afd4e:	mov    QWORD PTR [rsp+0x40],rbx
+  4afd53:	mov    QWORD PTR [rsp+0x38],rax
+  4afd58:	call   47a020 <runtime.makemap_small>
+  4afd5d:	mov    QWORD PTR [rsp+0x20],rax
+  4afd62:	xor    ecx,ecx
+  4afd64:	jmp    4afd94 <main.countMap+0x54>
+  4afd66:	mov    QWORD PTR [rsp+0x18],rcx
+  4afd6b:	mov    rdx,QWORD PTR [rsp+0x38]
+  4afd70:	mov    ecx,DWORD PTR [rdx+rcx*4]
+  4afd73:	mov    rbx,rax
+  4afd76:	lea    rax,[rip+0x13fc3]        # 4c3d40 <type:*+0x11d40>
+  4afd7d:	nop    DWORD PTR [rax]
+  4afd80:	call   40ed20 <runtime.mapassign_fast32>
+  4afd85:	inc    DWORD PTR [rax]
+  4afd87:	mov    rcx,QWORD PTR [rsp+0x18]
+  4afd8c:	inc    rcx
+  4afd8f:	mov    rax,QWORD PTR [rsp+0x20]
+  4afd94:	mov    rdx,QWORD PTR [rsp+0x40]
+  4afd99:	cmp    rdx,rcx
+  4afd9c:	jg     4afd66 <main.countMap+0x26>
+  4afd9e:	add    rsp,0x28
+  4afda2:	pop    rbp
+  4afda3:	ret
+  4afda4:	mov    QWORD PTR [rsp+0x8],rax
+  4afda9:	mov    QWORD PTR [rsp+0x10],rbx
+  4afdae:	mov    QWORD PTR [rsp+0x18],rcx
+  4afdb3:	call   47f7e0 <runtime.morestack_noctxt.abi0>
+  4afdb8:	mov    rax,QWORD PTR [rsp+0x8]
+  4afdbd:	mov    rbx,QWORD PTR [rsp+0x10]
+  4afdc2:	mov    rcx,QWORD PTR [rsp+0x18]
+  4afdc7:	jmp    4afd40 <main.countMap>
+  4afdcc:	int3
+  4afdcd:	int3
+  4afdce:	int3
+  4afdcf:	int3
+  4afdd0:	int3
+  4afdd1:	int3
+  4afdd2:	int3
+  4afdd3:	int3
+  4afdd4:	int3
+  4afdd5:	int3
+  4afdd6:	int3
+  4afdd7:	int3
+  4afdd8:	int3
+  4afdd9:	int3
+  4afdda:	int3
+  4afddb:	int3
+  4afddc:	int3
+  4afddd:	int3
+  4afdde:	int3
+  4afddf:	int3

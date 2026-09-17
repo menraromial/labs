@@ -1,0 +1,16 @@
+run_id,build,seed,sample,round,phase,position,workload,variant,elements,passes,elapsed_ns,result,gc_delta,cpu_before,cpu_after
+4,c-O2,20260922,0,0,warmup,0,hash_chain,control,1048576,1,1901734,60edcbcfce416d11,0,11,11
+4,c-O2,20260922,1,0,warmup,1,dot,control,1048576,1,1652918,410ff74524ad2567,0,11,11
+4,c-O2,20260922,2,0,warmup,2,hash_chain,control_double,1048576,2,3798343,cafe17741c251268,0,11,11
+4,c-O2,20260922,3,0,warmup,3,count,control,4194304,1,15600848,575011b204ab0ef9,0,11,11
+4,c-O2,20260922,4,0,warmup,4,hash_chain,control_bis,1048576,1,1904196,60edcbcfce416d11,0,11,11
+4,c-O2,20260922,5,1,measure,0,hash_chain,control,1048576,1,1913137,60edcbcfce416d11,0,11,11
+4,c-O2,20260922,6,1,measure,1,count,control,4194304,1,15704566,575011b204ab0ef9,0,11,11
+4,c-O2,20260922,7,1,measure,2,hash_chain,control_bis,1048576,1,1920325,60edcbcfce416d11,0,11,11
+4,c-O2,20260922,8,1,measure,3,hash_chain,control_double,1048576,2,3807165,cafe17741c251268,0,11,11
+4,c-O2,20260922,9,1,measure,4,dot,control,1048576,1,1592948,410ff74524ad2567,0,11,11
+4,c-O2,20260922,10,2,measure,0,hash_chain,control_bis,1048576,1,1840900,60edcbcfce416d11,0,11,11
+4,c-O2,20260922,11,2,measure,1,hash_chain,control_double,1048576,2,4499523,cafe17741c251268,0,11,11
+4,c-O2,20260922,12,2,measure,2,hash_chain,control,1048576,1,2166253,60edcbcfce416d11,0,11,11
+4,c-O2,20260922,13,2,measure,3,count,control,4194304,1,16772047,575011b204ab0ef9,0,11,11
+4,c-O2,20260922,14,2,measure,4,dot,control,1048576,1,2266273,410ff74524ad2567,0,11,11

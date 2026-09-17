@@ -1,0 +1,18 @@
+quantity,repetitions,median,min,max
+go: fin des init depuis le démarrage du runtime (ms),20,0.072,0.059,0.098
+go: durée des init (ms),20,0.007,0.006,0.010
+java: StubRoutines generation 1 (ms),20,0.377,0.368,0.414
+java: Genesis (ms),20,8.648,8.428,9.021
+java: Interpreter generation (ms),20,1.309,1.273,1.345
+java: StubRoutines generation 2 (ms),20,1.511,1.477,1.557
+java: MethodHandles adapters generation (ms),20,0.021,0.019,0.040
+java: Start VMThread (ms),20,0.113,0.102,0.164
+java: Initialize java.lang classes (ms),20,4.611,4.396,5.085
+java: Initialize java.lang.invoke classes (ms),20,0.553,0.517,0.983
+java: Initialize module system (ms),20,23.507,21.038,29.056
+java: Create VM (ms),20,47.975,45.423,54.567
+python: imports (ms),20,10.064,9.701,14.630
+python: import site (ms),20,6.389,6.195,9.567
+python-numpy: imports (ms),20,74.488,71.828,86.124
+python-numpy: import site (ms),20,6.189,5.880,8.185
+python-numpy: import numpy (ms),20,64.744,62.693,75.991

@@ -1,0 +1,2 @@
+run_id,build,runtime,first_cpu,peak_rss_kib,keys_sum,gc_total,jit,gil
+8,go,go1.26.0,11,101636,68664650837,0,none,none

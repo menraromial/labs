@@ -1,0 +1,7 @@
+ratio,median,ci95_low,ci95_high
+c-static/c-dynamic,0.800,0.753,0.850
+python-no-site/python,0.570,0.551,0.592
+python-isolated/python-no-site,1.006,0.966,1.042
+python-numpy/python,5.452,5.324,5.748
+node-jitless/node,0.987,0.937,1.028
+java-no-cds/java,1.287,1.255,1.337

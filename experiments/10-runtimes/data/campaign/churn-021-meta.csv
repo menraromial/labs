@@ -1,0 +1,2 @@
+run_id,mode,runtime,total_ns,operations,checksum,gc_count,gc_pause_ns,peak_rss_kib,cpus_allowed
+21,java-g1,java 17.0.20+8-1-26.04-Ubuntu G1_Young_Generation+G1_Old_Generation,520073691,8388608,56075093016576,7,308000000,423640,11

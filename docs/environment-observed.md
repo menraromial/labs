@@ -93,6 +93,27 @@ Aucun benchmark de durée n'a encore été exécuté.
 - Le noyau utilise de grands folios dans le cache de pages d'ext4 : `write_bytes`
   compte 1 Mio par réécriture de 4 Kio d'un fichier écrit d'un seul bloc de 1 Mio.
 
+## Compléments observés pendant E1
+
+- Chaînes disponibles : GCC 15.2, Clang 21.1, `rustc` 1.85.0 (LLVM 19.1.7, installé par
+  `rustup` dans `~/.cargo`), Go 1.26.0 (`GOAMD64=v1`), CPython 3.14.4 (GIL actif, JIT
+  disponible mais désactivé), NumPy 2.3.5 lié à OpenBLAS (variante `pthread`).
+- À travail équivalent, C, Rust et Go coûtent la même chose à 4 % près sur le CPU 11 ;
+  CPython coûte 30 à 78 fois C selon la charge.
+- Démarrage d'un programme qui se termine aussitôt : 0,6 à 0,9 ms en C et en Rust,
+  1,5 ms en Go, 19,8 ms pour CPython, 99,7 ms avec `import numpy`.
+
+## Compléments observés pendant E2
+
+- Environnements supplémentaires : OpenJDK 17.0.20 (HotSpot, G1 par défaut, tas maximal
+  estimé à 3,64 Gio ; `javac` 25 utilisé avec `--release 17`), Node 26.7.0 (V8 14.6),
+  LuaJIT présent ; ni PyPy ni .NET.
+- Démarrage d'un programme vide : 0,58 ms (C statique), 0,73 ms (C dynamique), 0,96 ms
+  (Rust), 1,2 ms (Go), 17 ms (CPython), 31 ms (Node), 59 ms (JVM), 92 ms (CPython avec
+  NumPy).
+- La JVM écrit ses durées avec une virgule décimale selon la locale : forcer `LC_ALL=C`
+  pour analyser `-Xlog`.
+
 ## Ce que ces faits ne garantissent pas
 
 - La topologie hybride exacte des cœurs performants/efficaces n'est pas encore

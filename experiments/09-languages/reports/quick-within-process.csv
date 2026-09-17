@@ -1,0 +1,27 @@
+build,workload,ratio,median,ci95_low,ci95_high,min,max
+c-O2,hash_chain,aa control_bis/control,0.922,0.922,0.922,0.922,0.922
+c-O2,hash_chain,positive control_double/control,2.036,2.036,2.036,2.036,2.036
+c-O3,hash_chain,aa control_bis/control,1.111,1.111,1.111,1.111,1.111
+c-O3,hash_chain,positive control_double/control,2.003,2.003,2.003,2.003,2.003
+rust,hash_chain,idiomatic/control,0.982,0.982,0.982,0.982,0.982
+rust,hash_chain,aa control_bis/control,0.974,0.974,0.974,0.974,0.974
+rust,hash_chain,positive control_double/control,1.993,1.993,1.993,1.993,1.993
+rust,dot,idiomatic/control,0.989,0.989,0.989,0.989,0.989
+rust,count,idiomatic/control,4.498,4.498,4.498,4.498,4.498
+rust,count,aa idiomatic_bis/idiomatic,1.009,1.009,1.009,1.009,1.009
+go,hash_chain,idiomatic/control,0.991,0.991,0.991,0.991,0.991
+go,hash_chain,aa control_bis/control,0.976,0.976,0.976,0.976,0.976
+go,hash_chain,positive control_double/control,2.027,2.027,2.027,2.027,2.027
+go,dot,idiomatic/control,0.973,0.973,0.973,0.973,0.973
+go,count,idiomatic/control,5.423,5.423,5.423,5.423,5.423
+go,count,aa idiomatic_bis/idiomatic,1.001,1.001,1.001,1.001,1.001
+python,hash_chain,idiomatic/control,0.894,0.894,0.894,0.894,0.894
+python,hash_chain,aa control_bis/control,0.996,0.996,0.996,0.996,0.996
+python,hash_chain,positive control_double/control,2.008,2.008,2.008,2.008,2.008
+python,dot,idiomatic/control,0.276,0.276,0.276,0.276,0.276
+python,dot,numpy/control,0.021,0.021,0.021,0.021,0.021
+python,dot,numpy/idiomatic,0.077,0.077,0.077,0.077,0.077
+python,count,idiomatic/control,0.421,0.421,0.421,0.421,0.421
+python,count,aa idiomatic_bis/idiomatic,0.946,0.946,0.946,0.946,0.946
+python,count,numpy/control,0.009,0.009,0.009,0.009,0.009
+python,count,numpy/idiomatic,0.021,0.021,0.021,0.021,0.021

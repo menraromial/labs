@@ -1,0 +1,10 @@
+[0.002s][info][startuptime] StubRoutines generation 1, 0.0003920 secs
+[0.011s][info][startuptime] Genesis, 0.0085698 secs
+[0.013s][info][startuptime] Interpreter generation, 0.0013055 secs
+[0.015s][info][startuptime] StubRoutines generation 2, 0.0014965 secs
+[0.015s][info][startuptime] MethodHandles adapters generation, 0.0000205 secs
+[0.015s][info][startuptime] Start VMThread, 0.0001046 secs
+[0.020s][info][startuptime] Initialize java.lang classes, 0.0043328 secs
+[0.024s][info][startuptime] Initialize java.lang.invoke classes, 0.0005132 secs
+[0.047s][info][startuptime] Initialize module system, 0.0232350 secs
+[0.048s][info][startuptime] Create VM, 0.0464405 secs

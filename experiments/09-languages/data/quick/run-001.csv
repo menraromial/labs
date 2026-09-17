@@ -1,0 +1,16 @@
+run_id,build,seed,sample,round,phase,position,workload,variant,elements,passes,elapsed_ns,result,gc_delta,cpu_before,cpu_after
+1,c-O3,20260922,0,0,warmup,0,hash_chain,control_double,1048576,2,4903428,cafe17741c251268,0,11,11
+1,c-O3,20260922,1,0,warmup,1,count,control,4194304,1,17379566,575011b204ab0ef9,0,11,11
+1,c-O3,20260922,2,0,warmup,2,dot,control,1048576,1,1780379,410ff74524ad2567,0,11,11
+1,c-O3,20260922,3,0,warmup,3,hash_chain,control_bis,1048576,1,1820683,60edcbcfce416d11,0,11,11
+1,c-O3,20260922,4,0,warmup,4,hash_chain,control,1048576,1,1985737,60edcbcfce416d11,0,11,11
+1,c-O3,20260922,5,1,measure,0,dot,control,1048576,1,1782858,410ff74524ad2567,0,11,11
+1,c-O3,20260922,6,1,measure,1,count,control,4194304,1,15501943,575011b204ab0ef9,0,11,11
+1,c-O3,20260922,7,1,measure,2,hash_chain,control,1048576,1,1821161,60edcbcfce416d11,0,11,11
+1,c-O3,20260922,8,1,measure,3,hash_chain,control_double,1048576,2,3784231,cafe17741c251268,0,11,11
+1,c-O3,20260922,9,1,measure,4,hash_chain,control_bis,1048576,1,1843345,60edcbcfce416d11,0,11,11
+1,c-O3,20260922,10,2,measure,0,hash_chain,control,1048576,1,2035581,60edcbcfce416d11,0,11,11
+1,c-O3,20260922,11,2,measure,1,hash_chain,control_double,1048576,2,3939053,cafe17741c251268,0,11,11
+1,c-O3,20260922,12,2,measure,2,dot,control,1048576,1,1870455,410ff74524ad2567,0,11,11
+1,c-O3,20260922,13,2,measure,3,hash_chain,control_bis,1048576,1,2443045,60edcbcfce416d11,0,11,11
+1,c-O3,20260922,14,2,measure,4,count,control,4194304,1,16218409,575011b204ab0ef9,0,11,11

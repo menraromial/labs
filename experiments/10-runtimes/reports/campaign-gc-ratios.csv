@@ -1,0 +1,12 @@
+ratio,median,ci95_low,ci95_high
+go-gogc400/go-gogc100 c,0.735,0.713,0.744
+go-gogc400/go-gogc100 bmax,0.982,0.892,1.059
+go-gogc400/go-gogc100 gc,0.167,0.167,0.167
+go-gogc400/go-gogc100 rss,1.813,1.711,1.828
+java-serial/java-g1 c,0.799,0.791,0.815
+java-serial/java-g1 bmax,2.378,2.318,2.504
+java-serial/java-g1 gc,0.857,0.857,0.857
+java-serial/java-g1 rss,0.696,0.694,0.696
+python-nogc/python-gc c,1.000,0.995,1.014
+python-nogc/python-gc bmax,1.027,0.974,1.104
+python-nogc/python-gc rss,1.000,1.000,1.000

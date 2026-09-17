@@ -1,0 +1,2 @@
+run_id,mode,runtime,total_ns,operations,checksum,gc_count,gc_pause_ns,peak_rss_kib,cpus_allowed
+160,java-serial,java 17.0.20+8-1-26.04-Ubuntu Copy+MarkSweepCompact,412253120,8388608,56075093016576,6,342000000,294624,11

@@ -1,0 +1,105 @@
+2026-09-17T16:11:21+02:00
+Linux pl-dapi-na-salsa-004 7.0.0-31-generic #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Aug  1 04:26:38 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+Architecture :                            x86_64
+Mode(s) opératoire(s) des processeurs :   32-bit, 64-bit
+Tailles des adresses:                     46 bits physical, 48 bits virtual
+Boutisme :                                Little Endian
+Processeur(s) :                           22
+Liste de processeur(s) en ligne :         0-21
+Identifiant constructeur :                GenuineIntel
+Nom de modèle :                           Intel(R) Core(TM) Ultra 7 165H
+Famille de processeur :                   6
+Modèle :                                  170
+Thread(s) par cœur :                      2
+Cœur(s) par socket :                      16
+Socket(s) :                               1
+Révision :                                4
+multiplication des MHz du/des CPU(s) :    33%
+Vitesse maximale du processeur en MHz :   5000,0000
+Vitesse minimale du processeur en MHz :   400,0000
+BogoMIPS :                                6144,00
+Drapeaux :                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid bus_lock_detect movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities
+Virtualisation :                          VT-x
+Cache L1d :                               544 KiB (14 instances)
+Cache L1i :                               896 KiB (14 instances)
+Cache L2 :                                18 MiB (9 instances)
+Cache L3 :                                24 MiB (1 instance)
+Nœud(s) NUMA :                            1
+Nœud NUMA 0 de processeur(s) :            0-21
+Vulnérabilité Gather data sampling :      Not affected
+Vulnérabilité Ghostwrite :                Not affected
+Vulnérabilité Indirect target selection : Not affected
+Vulnérabilité Itlb multihit :             Not affected
+Vulnérabilité L1tf :                      Not affected
+Vulnérabilité Mds :                       Not affected
+Vulnérabilité Meltdown :                  Not affected
+Vulnérabilité Mmio stale data :           Not affected
+Vulnérabilité Old microcode :             Not affected
+Vulnérabilité Reg file data sampling :    Not affected
+Vulnérabilité Retbleed :                  Not affected
+Vulnérabilité Spec rstack overflow :      Not affected
+Vulnérabilité Spec store bypass :         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnérabilité Spectre v1 :                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnérabilité Spectre v2 :                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS Not affected; BHI BHI_DIS_S
+Vulnérabilité Srbds :                     Not affected
+Vulnérabilité Tsa :                       Not affected
+Vulnérabilité Tsx async abort :           Not affected
+Vulnérabilité Vmscape :                   Mitigation; IBPB before exit to userspace
+               total       utilisé      libre     partagé tamp/cache   disponible
+Mem:            14Gi        11Gi       378Mi       1,5Gi       4,4Gi       3,0Gi
+Échange:          0B          0B          0B
+scaling_governor=powersave
+energy_performance_preference=power
+loadavg=1.31 1.45 1.45 4/2898 2025346
+cpu9 frères=8-9 ; cpu11 frères=10-11
+
+environnements d exécution :
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+rustc 1.85.0 (4d91de4e4 2025-02-17)
+go version go1.26.0 linux/amd64
+VM settings:
+    Max. Heap Size (Estimated): 3.64G
+    Using VM: OpenJDK 64-Bit Server VM
+
+openjdk version "17.0.20" 2026-07-21
+OpenJDK Runtime Environment (build 17.0.20+8-1-26.04-Ubuntu)
+OpenJDK 64-Bit Server VM (build 17.0.20+8-1-26.04-Ubuntu, mixed mode, sharing)
+javac 25.0.4
+node v26.7.0 v8 14.6.202.34-node.28
+Python 3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]
+jit disponible True gil True numpy 2.3.5
+options de compilation :
+sources et binaires :
+a2a48aecb68bc1d633c72c93beecaba63da29fa701844d4fa38c6f0eacba7b4d  src/c/churn.c
+bd4daefac7277facae42168d78f70a65a01b0fc452c1fab7ed24c15436e142ce  src/c/launch.c
+2ad75d95660563887d8d3f1d0ae1dcf18c2379cbd83a5c72f5ab276351ee6949  src/c/noop.c
+8af5635f0a30ad8b6b34c84600d64d8ff57dd0bb9053668916481f86317350f5  src/c/warm.c
+c1e7a8f1a297eb46e417393646a0a4eaf9f8ba451db1a1fe3d84d3fd63a3511d  src/go/churn.go
+55a60bb97151b2b4b680462447ce60ec34511b14fa10d77440c97b9777101566  src/go/noop.go
+d2976585d4016dcb52aa2a9b1bfbd01cbb12e6c25ccf54eb4e18969e169eef04  src/java/Churn.java
+0a61d61ca37f51a122cd467a869707a9ac66eb90aa9a44c2b7255adc251f0620  src/java/Noop.java
+9053a16298759a3115f43a1f5825b8614e09b83009672272a9f804d5b9556434  src/java/Warm.java
+b8911b20ec0e459f24744424a14d2bdcc105527816e5f9b115b48dd699edc765  src/node/churn.mjs
+1a3c731a948e166ae37dffc4fdafc482392b58c5a5574e6814b4094f87da5d6c  src/node/noop.mjs
+0c418ed55ac412bafe86576081b34d4dc84068a5592367df0f71df4235c4c425  src/node/warm.mjs
+3fb8a70bccfff1fb573f6ecc3beb91ed8eaec12d4cba83a76e51efe86cc4ef1a  src/python/churn.py
+e21659fcaaa61652e3a70b9321624ecc9ff1308bb43f5bab33ce27771684f08a  src/python/noop.py
+e07e278ba5379c2d6a692a5b276f468dcaa9d0d67f8ce6875d8590fc28c4547e  src/python/noop_numpy.py
+5c363573a60612fbb2eea5a580a4e09b9c887903d02cc98c4b392aa806e2b739  src/python/warm.py
+536e506bb90914c243a12b397b9a998f85ae2cbd9ba02dfd03a9e155ca5ca0f4  src/rust/noop.rs
+8c1161ba3bdb00852c829f16197ae99cb3c002e946a3a56c256fcff46229f7a1  build/warm-c
+197670de3fed16aeb8543a0ae53dbd9a85525c3034674583c94b5f3eeb8cbde2  build/churn-c
+e67ef6609d851c586123da8836364ef0ca93f7f874e66b55a7027e46a090330a  build/churn-go
+d1632ad558728b221a31e9f6d2c027eb563fb0ebc85e0dfb8837039c89f85d55  build/noop-c
+8da8fc89a7e7942682a1ae4d973dc66459b3cca0d08d42f735fb7f7a70d37f1e  build/noop-c-static
+c480fe63d72b2618fdc2c831f9405582f96b9e6b92fac0edd068ee07d8c80f15  build/noop-rust
+fa2092431dd733a580a2ed5da246b1ea78f308a2ee3833a9a9417246849d1c5c  build/noop-go
+fda5fc9787b1942058a8fc5f009b688281df3446095f90207395e73543cc776b  build/launch
+210039de04a8a69290377edd1fd394f4e0aa9ced808f95b2e421f3ff10055829  build/classes/Churn$Obj.class
+10e013dfd2047d1c072cd1ffb1fa72e6549cf5863821bfbb2a3a24a7775f3d22  build/classes/Churn.class
+00c8a637a3f7c43c9389a90df8a2d049c9746047cdd95a129bf5fff051490ba7  build/classes/Noop.class
+49418ce1594368c134348a7f3c81d1a8d039c20b60f41ee0cd28cc2641746d86  build/classes/Warm.class

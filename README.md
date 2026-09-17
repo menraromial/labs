@@ -64,6 +64,9 @@ algorithme, bibliothèque et langage.
 - [x] Projet D1 : prédictions, comptes d'appels système vérifiés par le noyau.
 - [x] Projet D1 : coût d'entrée, lots et tampons mesurés, fiche superviseur.
 - [x] Projet D2 : cache de pages, stockage et persistance mesurés, fiche superviseur.
+- [x] Projet E1 : analyse statique, prédictions, campagne sur 5 versions et 3 charges.
+- [x] Projet E1 : comparaison contrôlée, écritures idiomatiques, NumPy, démarrage, fiche superviseur.
+- [x] Projet E2 : démarrage décomposé, échauffement des JIT, ramasse-miettes, fiche superviseur.
 
 Voir [le diagnostic initial](docs/environment-observed.md),
 [le projet A1](experiments/01-time/README.md),
@@ -72,8 +75,10 @@ Voir [le diagnostic initial](docs/environment-observed.md),
 [le projet B2](experiments/04-dependencies-branches/README.md),
 [le projet C1](experiments/05-memory-traversal/README.md),
 [le projet C2](experiments/06-dependent-access/README.md),
-[le projet D1](experiments/07-syscalls/README.md) et
-[le projet D2](experiments/08-files/README.md).
+[le projet D1](experiments/07-syscalls/README.md),
+[le projet D2](experiments/08-files/README.md),
+[le projet E1](experiments/09-languages/README.md) et
+[le projet E2](experiments/10-runtimes/README.md).
 
 ## Structure cible (créée progressivement)
 

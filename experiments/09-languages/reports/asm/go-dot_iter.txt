@@ -1,0 +1,26 @@
+  4afd00:	push   rbp
+  4afd01:	mov    rbp,rsp
+  4afd04:	mov    QWORD PTR [rsp+0x10],rax
+  4afd09:	mov    QWORD PTR [rsp+0x28],rdi
+  4afd0e:	xor    ecx,ecx
+  4afd10:	xorps  xmm0,xmm0
+  4afd13:	jmp    4afd21 <main.dotRange+0x21>
+  4afd15:	mulsd  xmm1,QWORD PTR [rdi+rcx*8]
+  4afd1a:	addsd  xmm0,xmm1
+  4afd1e:	inc    rcx
+  4afd21:	cmp    rbx,rcx
+  4afd24:	jle    4afd32 <main.dotRange+0x32>
+  4afd26:	movsd  xmm1,QWORD PTR [rax+rcx*8]
+  4afd2b:	cmp    rsi,rcx
+  4afd2e:	ja     4afd15 <main.dotRange+0x15>
+  4afd30:	jmp    4afd34 <main.dotRange+0x34>
+  4afd32:	pop    rbp
+  4afd33:	ret
+  4afd34:	call   481500 <runtime.panicBounds>
+  4afd39:	nop
+  4afd3a:	int3
+  4afd3b:	int3
+  4afd3c:	int3
+  4afd3d:	int3
+  4afd3e:	int3
+  4afd3f:	int3

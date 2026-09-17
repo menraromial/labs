@@ -1,0 +1,34 @@
+  4afcc0:	mov    QWORD PTR [rsp+0x8],rax
+  4afcc5:	xor    ecx,ecx
+  4afcc7:	jmp    4afce1 <main.hashChainRange+0x21>
+  4afcc9:	mov    rdx,QWORD PTR [rax+rcx*8]
+  4afccd:	xor    rdi,rdx
+  4afcd0:	movabs rdx,0x9e3779b97f4a7c15
+  4afcda:	imul   rdi,rdx
+  4afcde:	inc    rcx
+  4afce1:	cmp    rbx,rcx
+  4afce4:	jg     4afcc9 <main.hashChainRange+0x9>
+  4afce6:	mov    rax,rdi
+  4afce9:	ret
+  4afcea:	int3
+  4afceb:	int3
+  4afcec:	int3
+  4afced:	int3
+  4afcee:	int3
+  4afcef:	int3
+  4afcf0:	int3
+  4afcf1:	int3
+  4afcf2:	int3
+  4afcf3:	int3
+  4afcf4:	int3
+  4afcf5:	int3
+  4afcf6:	int3
+  4afcf7:	int3
+  4afcf8:	int3
+  4afcf9:	int3
+  4afcfa:	int3
+  4afcfb:	int3
+  4afcfc:	int3
+  4afcfd:	int3
+  4afcfe:	int3
+  4afcff:	int3

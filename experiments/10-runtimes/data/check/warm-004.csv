@@ -1,0 +1,7 @@
+run_id,mode,step,workload,elements,elapsed_ns,result,cpu
+4,java,0,hash_chain,1024,25351,3965acb4d38436f0,-1
+4,java,0,dot,1024,22852,4070ab5404c7a4da,-1
+4,java,1,hash_chain,1024,21629,3965acb4d38436f0,-1
+4,java,1,dot,1024,21490,4070ab5404c7a4da,-1
+4,java,2,hash_chain,1024,21482,3965acb4d38436f0,-1
+4,java,2,dot,1024,21124,4070ab5404c7a4da,-1

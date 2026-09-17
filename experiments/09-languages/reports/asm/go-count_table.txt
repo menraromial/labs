@@ -1,0 +1,47 @@
+  4afc40:	push   rbp
+  4afc41:	mov    rbp,rsp
+  4afc44:	mov    QWORD PTR [rsp+0x10],rax
+  4afc49:	mov    QWORD PTR [rsp+0x28],rdi
+  4afc4e:	mov    QWORD PTR [rsp+0x40],r9
+  4afc53:	xor    ecx,ecx
+  4afc55:	jmp    4afc60 <main.countTable+0x20>
+  4afc57:	inc    DWORD PTR [r9+r11*4]
+  4afc5b:	inc    rcx
+  4afc5e:	xchg   ax,ax
+  4afc60:	cmp    rbx,rcx
+  4afc63:	jle    4afca9 <main.countTable+0x69>
+  4afc65:	mov    edx,DWORD PTR [rax+rcx*4]
+  4afc68:	inc    edx
+  4afc6a:	movabs r8,0x9e3779b97f4a7c15
+  4afc74:	imul   r8,rdx
+  4afc78:	shr    r8,0x2f
+  4afc7c:	jmp    4afc88 <main.countTable+0x48>
+  4afc7e:	inc    r8d
+  4afc81:	and    r8d,0x1ffff
+  4afc88:	mov    r11d,r8d
+  4afc8b:	cmp    rsi,r11
+  4afc8e:	jbe    4afcb0 <main.countTable+0x70>
+  4afc90:	mov    r12d,DWORD PTR [rdi+r11*4]
+  4afc94:	test   r12d,r12d
+  4afc97:	je     4afc9e <main.countTable+0x5e>
+  4afc99:	cmp    r12d,edx
+  4afc9c:	jne    4afc7e <main.countTable+0x3e>
+  4afc9e:	mov    DWORD PTR [rdi+r11*4],edx
+  4afca2:	cmp    r10,r11
+  4afca5:	ja     4afc57 <main.countTable+0x17>
+  4afca7:	jmp    4afcab <main.countTable+0x6b>
+  4afca9:	pop    rbp
+  4afcaa:	ret
+  4afcab:	call   481500 <runtime.panicBounds>
+  4afcb0:	call   481500 <runtime.panicBounds>
+  4afcb5:	nop
+  4afcb6:	int3
+  4afcb7:	int3
+  4afcb8:	int3
+  4afcb9:	int3
+  4afcba:	int3
+  4afcbb:	int3
+  4afcbc:	int3
+  4afcbd:	int3
+  4afcbe:	int3
+  4afcbf:	int3

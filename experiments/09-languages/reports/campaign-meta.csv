@@ -1,0 +1,6 @@
+build,processes,runtime,peak_rss_mib_median,automatic_gc_total_max,jit,gil
+c-O2,10,15.2.0,67.0,0,none,none
+c-O3,10,15.2.0,67.0,0,none,none
+rust,10,rustc,101.6,0,none,none
+go,10,go1.26.0,98.9,0,none,none
+python,10,CPython 3.14.4 numpy 2.3.5,585.0,0,False,True

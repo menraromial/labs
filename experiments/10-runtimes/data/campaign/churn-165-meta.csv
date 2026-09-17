@@ -1,0 +1,2 @@
+run_id,mode,runtime,total_ns,operations,checksum,gc_count,gc_pause_ns,peak_rss_kib,cpus_allowed
+165,go-gogc100,go1.26.0 GOGC=100,356610375,8388608,56075093016576,6,122393,82916,11

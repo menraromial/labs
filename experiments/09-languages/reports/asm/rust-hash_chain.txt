@@ -1,0 +1,36 @@
+    9a60:	mov    rax,rdx
+    9a63:	movabs rcx,0x9e3779b97f4a7c15
+    9a6d:	lea    r8,[rsi-0x1]
+    9a71:	mov    edx,esi
+    9a73:	and    edx,0x3
+    9a76:	cmp    r8,0x3
+    9a7a:	jae    9a81 <bench::hash_chain+0x21>
+    9a7c:	xor    r8d,r8d
+    9a7f:	jmp    9abc <bench::hash_chain+0x5c>
+    9a81:	and    rsi,0xfffffffffffffffc
+    9a85:	xor    r8d,r8d
+    9a88:	nop    DWORD PTR [rax+rax*1+0x0]
+    9a90:	xor    rax,QWORD PTR [rdi+r8*8]
+    9a94:	imul   rax,rcx
+    9a98:	xor    rax,QWORD PTR [rdi+r8*8+0x8]
+    9a9d:	imul   rax,rcx
+    9aa1:	xor    rax,QWORD PTR [rdi+r8*8+0x10]
+    9aa6:	imul   rax,rcx
+    9aaa:	xor    rax,QWORD PTR [rdi+r8*8+0x18]
+    9aaf:	add    r8,0x4
+    9ab3:	imul   rax,rcx
+    9ab7:	cmp    rsi,r8
+    9aba:	jne    9a90 <bench::hash_chain+0x30>
+    9abc:	test   rdx,rdx
+    9abf:	je     9ae0 <bench::hash_chain+0x80>
+    9ac1:	lea    rsi,[rdi+r8*8]
+    9ac5:	xor    edi,edi
+    9ac7:	nop    WORD PTR [rax+rax*1+0x0]
+    9ad0:	xor    rax,QWORD PTR [rsi+rdi*8]
+    9ad4:	imul   rax,rcx
+    9ad8:	inc    rdi
+    9adb:	cmp    rdx,rdi
+    9ade:	jne    9ad0 <bench::hash_chain+0x70>
+    9ae0:	ret
+    9ae1:	cs nop WORD PTR [rax+rax*1+0x0]
+    9aeb:	nop    DWORD PTR [rax+rax*1+0x0]

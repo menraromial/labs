@@ -1,0 +1,6 @@
+run_id,build,cpu,seed,rounds,warmup_rounds,scale_log2
+1,c-O3,11,20260922,2,1,8
+2,go,11,20260922,2,1,8
+3,python,11,20260922,2,1,8
+4,c-O2,11,20260922,2,1,8
+5,rust,11,20260922,2,1,8

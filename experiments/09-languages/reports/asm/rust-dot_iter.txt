@@ -1,0 +1,47 @@
+    9cf0:	cmp    rsi,rcx
+    9cf3:	cmovb  rcx,rsi
+    9cf7:	test   rcx,rcx
+    9cfa:	je     9d14 <bench::dot_iter+0x24>
+    9cfc:	mov    eax,ecx
+    9cfe:	and    eax,0x3
+    9d01:	cmp    rcx,0x4
+    9d05:	jae    9d1d <bench::dot_iter+0x2d>
+    9d07:	movsd  xmm0,QWORD PTR [rip+0x462f1]        # 50000 <_fini+0xd44>
+    9d0f:	xor    r8d,r8d
+    9d12:	jmp    9d7a <bench::dot_iter+0x8a>
+    9d14:	movsd  xmm0,QWORD PTR [rip+0x462e4]        # 50000 <_fini+0xd44>
+    9d1c:	ret
+    9d1d:	and    rcx,0xfffffffffffffffc
+    9d21:	movsd  xmm0,QWORD PTR [rip+0x462d7]        # 50000 <_fini+0xd44>
+    9d29:	xor    esi,esi
+    9d2b:	nop    DWORD PTR [rax+rax*1+0x0]
+    9d30:	movsd  xmm1,QWORD PTR [rdi+rsi*8]
+    9d35:	mulsd  xmm1,QWORD PTR [rdx+rsi*8]
+    9d3a:	movsd  xmm2,QWORD PTR [rdi+rsi*8+0x8]
+    9d40:	addsd  xmm1,xmm0
+    9d44:	mulsd  xmm2,QWORD PTR [rdx+rsi*8+0x8]
+    9d4a:	addsd  xmm2,xmm1
+    9d4e:	movsd  xmm1,QWORD PTR [rdi+rsi*8+0x10]
+    9d54:	mulsd  xmm1,QWORD PTR [rdx+rsi*8+0x10]
+    9d5a:	addsd  xmm1,xmm2
+    9d5e:	movsd  xmm0,QWORD PTR [rdi+rsi*8+0x18]
+    9d64:	mulsd  xmm0,QWORD PTR [rdx+rsi*8+0x18]
+    9d6a:	lea    r8,[rsi+0x4]
+    9d6e:	addsd  xmm0,xmm1
+    9d72:	mov    rsi,r8
+    9d75:	cmp    rcx,r8
+    9d78:	jne    9d30 <bench::dot_iter+0x40>
+    9d7a:	test   rax,rax
+    9d7d:	je     9da6 <bench::dot_iter+0xb6>
+    9d7f:	lea    rcx,[rdx+r8*8]
+    9d83:	lea    rdx,[rdi+r8*8]
+    9d87:	xor    esi,esi
+    9d89:	nop    DWORD PTR [rax+0x0]
+    9d90:	movsd  xmm1,QWORD PTR [rdx+rsi*8]
+    9d95:	mulsd  xmm1,QWORD PTR [rcx+rsi*8]
+    9d9a:	addsd  xmm0,xmm1
+    9d9e:	inc    rsi
+    9da1:	cmp    rax,rsi
+    9da4:	jne    9d90 <bench::dot_iter+0xa0>
+    9da6:	ret
+    9da7:	nop    WORD PTR [rax+rax*1+0x0]

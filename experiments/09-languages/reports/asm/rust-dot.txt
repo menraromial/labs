@@ -1,0 +1,53 @@
+    9af0:	test   rsi,rsi
+    9af3:	je     9b16 <bench::dot+0x26>
+    9af5:	lea    rax,[rsi-0x1]
+    9af9:	cmp    rax,rcx
+    9afc:	jae    9ba7 <bench::dot+0xb7>
+    9b02:	mov    eax,esi
+    9b04:	and    eax,0x3
+    9b07:	cmp    rsi,0x4
+    9b0b:	jae    9b1a <bench::dot+0x2a>
+    9b0d:	xorpd  xmm0,xmm0
+    9b11:	xor    r8d,r8d
+    9b14:	jmp    9b7a <bench::dot+0x8a>
+    9b16:	xorps  xmm0,xmm0
+    9b19:	ret
+    9b1a:	and    rsi,0xfffffffffffffffc
+    9b1e:	xorpd  xmm0,xmm0
+    9b22:	xor    ecx,ecx
+    9b24:	data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+    9b30:	movsd  xmm1,QWORD PTR [rdi+rcx*8]
+    9b35:	mulsd  xmm1,QWORD PTR [rdx+rcx*8]
+    9b3a:	movsd  xmm2,QWORD PTR [rdi+rcx*8+0x8]
+    9b40:	addsd  xmm1,xmm0
+    9b44:	mulsd  xmm2,QWORD PTR [rdx+rcx*8+0x8]
+    9b4a:	addsd  xmm2,xmm1
+    9b4e:	movsd  xmm1,QWORD PTR [rdi+rcx*8+0x10]
+    9b54:	mulsd  xmm1,QWORD PTR [rdx+rcx*8+0x10]
+    9b5a:	addsd  xmm1,xmm2
+    9b5e:	movsd  xmm0,QWORD PTR [rdi+rcx*8+0x18]
+    9b64:	mulsd  xmm0,QWORD PTR [rdx+rcx*8+0x18]
+    9b6a:	lea    r8,[rcx+0x4]
+    9b6e:	addsd  xmm0,xmm1
+    9b72:	mov    rcx,r8
+    9b75:	cmp    rsi,r8
+    9b78:	jne    9b30 <bench::dot+0x40>
+    9b7a:	test   rax,rax
+    9b7d:	je     9ba6 <bench::dot+0xb6>
+    9b7f:	lea    rcx,[rdx+r8*8]
+    9b83:	lea    rdx,[rdi+r8*8]
+    9b87:	xor    esi,esi
+    9b89:	nop    DWORD PTR [rax+0x0]
+    9b90:	movsd  xmm1,QWORD PTR [rdx+rsi*8]
+    9b95:	mulsd  xmm1,QWORD PTR [rcx+rsi*8]
+    9b9a:	addsd  xmm0,xmm1
+    9b9e:	inc    rsi
+    9ba1:	cmp    rax,rsi
+    9ba4:	jne    9b90 <bench::dot+0xa0>
+    9ba6:	ret
+    9ba7:	push   rax
+    9ba8:	lea    rdx,[rip+0x56af1]        # 606a0 <__do_global_dtors_aux_fini_array_entry+0x80>
+    9baf:	mov    rdi,rcx
+    9bb2:	mov    rsi,rcx
+    9bb5:	call   QWORD PTR [rip+0x5a35d]        # 63f18 <_GLOBAL_OFFSET_TABLE_+0x810>
+    9bbb:	nop    DWORD PTR [rax+rax*1+0x0]

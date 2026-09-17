@@ -1,0 +1,170 @@
+    9db0:	push   rbp
+    9db1:	push   r15
+    9db3:	push   r14
+    9db5:	push   r13
+    9db7:	push   r12
+    9db9:	push   rbx
+    9dba:	sub    rsp,0x48
+    9dbe:	mov    r12,rdx
+    9dc1:	mov    r14,rsi
+    9dc4:	mov    rbx,0xffffffffffffffe0
+    9dcb:	cmp    DWORD PTR fs:[rbx],0x1
+    9dcf:	mov    QWORD PTR [rsp+0x40],rdi
+    9dd4:	jne    9de2 <bench::count_hashmap+0x32>
+    9dd6:	mov    rax,QWORD PTR fs:[rbx+0x8]
+    9ddb:	mov    rdx,QWORD PTR fs:[rbx+0x10]
+    9de0:	jmp    9dfa <bench::count_hashmap+0x4a>
+    9de2:	call   QWORD PTR [rip+0x5a040]        # 63e28 <_GLOBAL_OFFSET_TABLE_+0x720>
+    9de8:	mov    QWORD PTR fs:[rbx],0x1
+    9df0:	mov    QWORD PTR fs:[rbx+0x8],rax
+    9df5:	mov    QWORD PTR fs:[rbx+0x10],rdx
+    9dfa:	lea    rcx,[rax+0x1]
+    9dfe:	mov    QWORD PTR fs:[rbx+0x8],rcx
+    9e03:	movups xmm0,XMMWORD PTR [rip+0x568de]        # 606e8 <__do_global_dtors_aux_fini_array_entry+0xc8>
+    9e0a:	movaps XMMWORD PTR [rsp+0x10],xmm0
+    9e0f:	movdqu xmm0,XMMWORD PTR [rip+0x568e1]        # 606f8 <__do_global_dtors_aux_fini_array_entry+0xd8>
+    9e17:	movdqa XMMWORD PTR [rsp+0x20],xmm0
+    9e1d:	mov    QWORD PTR [rsp+0x30],rax
+    9e22:	mov    QWORD PTR [rsp+0x38],rdx
+    9e27:	test   r12,r12
+    9e2a:	je     a016 <bench::count_hashmap+0x266>
+    9e30:	lea    r13,[r14+r12*4]
+    9e34:	lea    r12,[rsp+0xc]
+    9e39:	jmp    9f57 <bench::count_hashmap+0x1a7>
+    9e3e:	xchg   ax,ax
+    9e40:	movdqu xmm1,XMMWORD PTR [rax+rdi*1]
+    9e45:	movdqa xmm2,xmm1
+    9e49:	pcmpeqb xmm2,xmm0
+    9e4d:	pmovmskb r8d,xmm2
+    9e52:	test   r8d,r8d
+    9e55:	je     9e90 <bench::count_hashmap+0xe0>
+    9e57:	tzcnt  r9d,r8d
+    9e5c:	add    r9,rdi
+    9e5f:	and    r9,rcx
+    9e62:	lea    r10,[r9*8+0x0]
+    9e6a:	mov    r11,rax
+    9e6d:	sub    r11,r10
+    9e70:	cmp    DWORD PTR [r11-0x8],ebx
+    9e74:	je     9ec0 <bench::count_hashmap+0x110>
+    9e76:	lea    r9d,[r8-0x1]
+    9e7a:	and    r9w,r8w
+    9e7e:	mov    r8d,r9d
+    9e81:	jne    9e57 <bench::count_hashmap+0xa7>
+    9e83:	data16 data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+    9e90:	pcmpeqb xmm1,XMMWORD PTR [rip+0x46368]        # 50200 <_fini+0xf44>
+    9e98:	pmovmskb r8d,xmm1
+    9e9d:	test   r8d,r8d
+    9ea0:	jne    9ee0 <bench::count_hashmap+0x130>
+    9ea2:	add    rdi,rsi
+    9ea5:	add    rdi,0x10
+    9ea9:	add    rsi,0x10
+    9ead:	and    rdi,rcx
+    9eb0:	jmp    9e40 <bench::count_hashmap+0x90>
+    9eb2:	data16 data16 data16 data16 cs nop WORD PTR [rax+rax*1+0x0]
+    9ec0:	neg    r9
+    9ec3:	lea    rcx,[rax+r9*8]
+    9ec7:	inc    DWORD PTR [rcx-0x4]
+    9eca:	cmp    r14,r13
+    9ecd:	jne    9f57 <bench::count_hashmap+0x1a7>
+    9ed3:	jmp    a016 <bench::count_hashmap+0x266>
+    9ed8:	nop    DWORD PTR [rax+rax*1+0x0]
+    9ee0:	cmp    QWORD PTR [rsp+0x20],0x0
+    9ee6:	je     9fa6 <bench::count_hashmap+0x1f6>
+    9eec:	movdqu xmm0,XMMWORD PTR [rax+rdx*1]
+    9ef1:	pmovmskb esi,xmm0
+    9ef5:	test   esi,esi
+    9ef7:	je     9fdf <bench::count_hashmap+0x22f>
+    9efd:	tzcnt  esi,esi
+    9f01:	add    rsi,rdx
+    9f04:	and    rsi,rcx
+    9f07:	movzx  edx,BYTE PTR [rax+rsi*1]
+    9f0b:	test   dl,dl
+    9f0d:	jns    a001 <bench::count_hashmap+0x251>
+    9f13:	lea    rdi,[rsi-0x10]
+    9f17:	and    rdi,rcx
+    9f1a:	mov    BYTE PTR [rax+rsi*1],r15b
+    9f1e:	mov    BYTE PTR [rax+rdi*1+0x10],r15b
+    9f23:	shl    rsi,0x3
+    9f27:	and    dl,0x1
+    9f2a:	movzx  ecx,dl
+    9f2d:	sub    QWORD PTR [rsp+0x20],rcx
+    9f32:	mov    rcx,rax
+    9f35:	sub    rcx,rsi
+    9f38:	neg    rsi
+    9f3b:	mov    DWORD PTR [rax+rsi*1-0x8],ebx
+    9f3f:	mov    DWORD PTR [rcx-0x4],0x0
+    9f46:	inc    QWORD PTR [rsp+0x28]
+    9f4b:	inc    DWORD PTR [rcx-0x4]
+    9f4e:	cmp    r14,r13
+    9f51:	je     a016 <bench::count_hashmap+0x266>
+    9f57:	mov    ebx,DWORD PTR [r14]
+    9f5a:	mov    DWORD PTR [rsp+0xc],ebx
+    9f5e:	lea    rdi,[rsp+0x30]
+    9f63:	mov    rsi,r12
+    9f66:	call   e5d0 <core::hash::BuildHasher::hash_one>
+    9f6b:	mov    rbp,rax
+    9f6e:	add    r14,0x4
+    9f72:	mov    r15,rax
+    9f75:	shr    r15,0x39
+    9f79:	mov    rax,QWORD PTR [rsp+0x10]
+    9f7e:	mov    rcx,QWORD PTR [rsp+0x18]
+    9f83:	mov    rdx,rcx
+    9f86:	and    rdx,rbp
+    9f89:	movd   xmm0,r15d
+    9f8e:	punpcklbw xmm0,xmm0
+    9f92:	pshuflw xmm0,xmm0,0x0
+    9f97:	pshufd xmm0,xmm0,0x0
+    9f9c:	xor    esi,esi
+    9f9e:	mov    rdi,rdx
+    9fa1:	jmp    9e40 <bench::count_hashmap+0x90>
+    9fa6:	mov    esi,0x1
+    9fab:	lea    rdi,[rsp+0x10]
+    9fb0:	lea    rdx,[rsp+0x30]
+    9fb5:	call   7790 <hashbrown::raw::RawTable<T,A>::reserve_rehash>
+    9fba:	mov    ebx,DWORD PTR [rsp+0xc]
+    9fbe:	mov    rax,QWORD PTR [rsp+0x10]
+    9fc3:	mov    rcx,QWORD PTR [rsp+0x18]
+    9fc8:	and    rbp,rcx
+    9fcb:	mov    rdx,rbp
+    9fce:	movdqu xmm0,XMMWORD PTR [rax+rdx*1]
+    9fd3:	pmovmskb esi,xmm0
+    9fd7:	test   esi,esi
+    9fd9:	jne    9efd <bench::count_hashmap+0x14d>
+    9fdf:	mov    edi,0x10
+    9fe4:	add    rdx,rdi
+    9fe7:	and    rdx,rcx
+    9fea:	movdqu xmm0,XMMWORD PTR [rax+rdx*1]
+    9fef:	pmovmskb esi,xmm0
+    9ff3:	add    rdi,0x10
+    9ff7:	test   esi,esi
+    9ff9:	jne    9efd <bench::count_hashmap+0x14d>
+    9fff:	jmp    9fe4 <bench::count_hashmap+0x234>
+    a001:	movdqa xmm0,XMMWORD PTR [rax]
+    a005:	pmovmskb edx,xmm0
+    a009:	tzcnt  esi,edx
+    a00d:	movzx  edx,BYTE PTR [rax+rsi*1]
+    a011:	jmp    9f13 <bench::count_hashmap+0x163>
+    a016:	movaps xmm0,XMMWORD PTR [rsp+0x10]
+    a01b:	movaps xmm1,XMMWORD PTR [rsp+0x20]
+    a020:	mov    rax,QWORD PTR [rsp+0x30]
+    a025:	mov    rcx,QWORD PTR [rsp+0x40]
+    a02a:	mov    QWORD PTR [rcx+0x20],rax
+    a02e:	mov    rax,QWORD PTR [rsp+0x38]
+    a033:	mov    QWORD PTR [rcx+0x28],rax
+    a037:	movups XMMWORD PTR [rcx+0x10],xmm1
+    a03b:	movups XMMWORD PTR [rcx],xmm0
+    a03e:	add    rsp,0x48
+    a042:	pop    rbx
+    a043:	pop    r12
+    a045:	pop    r13
+    a047:	pop    r14
+    a049:	pop    r15
+    a04b:	pop    rbp
+    a04c:	ret
+    a04d:	mov    rbx,rax
+    a050:	lea    rdi,[rsp+0x10]
+    a055:	call   cf90 <<hashbrown::raw::RawTable<T,A> as core::ops::drop::Drop>::drop>
+    a05a:	mov    rdi,rbx
+    a05d:	call   7040 <_Unwind_Resume@plt>
+    a062:	cs nop WORD PTR [rax+rax*1+0x0]
+    a06c:	nop    DWORD PTR [rax+0x0]

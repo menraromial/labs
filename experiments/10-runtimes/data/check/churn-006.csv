@@ -1,0 +1,17 @@
+run_id,mode,batch,operations,elapsed_ns
+6,java-serial,0,256,23216
+6,java-serial,1,256,17459
+6,java-serial,2,256,18652
+6,java-serial,3,256,22509
+6,java-serial,4,256,18654
+6,java-serial,5,256,16531
+6,java-serial,6,256,18085
+6,java-serial,7,256,16870
+6,java-serial,8,256,18389
+6,java-serial,9,256,17290
+6,java-serial,10,256,26980
+6,java-serial,11,256,17038
+6,java-serial,12,256,17892
+6,java-serial,13,256,16489
+6,java-serial,14,256,18092
+6,java-serial,15,256,19578

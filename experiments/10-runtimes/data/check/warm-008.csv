@@ -1,0 +1,7 @@
+run_id,mode,step,workload,elements,elapsed_ns,result,cpu
+8,c,0,hash_chain,1024,1740,3965acb4d38436f0,11
+8,c,0,dot,1024,875,4070ab5404c7a4da,11
+8,c,1,hash_chain,1024,1660,3965acb4d38436f0,11
+8,c,1,dot,1024,847,4070ab5404c7a4da,11
+8,c,2,hash_chain,1024,1658,3965acb4d38436f0,11
+8,c,2,dot,1024,848,4070ab5404c7a4da,11

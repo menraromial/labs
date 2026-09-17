@@ -1,0 +1,11 @@
+run_id,build,seed,sample,round,phase,position,workload,variant,elements,passes,elapsed_ns,result,gc_delta,cpu_before,cpu_after
+4,c-O2,20260922,0,0,warmup,0,hash_chain,control,4096,1,6641,d2f4c6a9cd3b03a2,0,11,11
+4,c-O2,20260922,1,0,warmup,1,dot,control,4096,1,3353,40903ff84d9cc6a3,0,11,11
+4,c-O2,20260922,2,0,warmup,2,hash_chain,control_double,4096,2,13179,174e2e43fff59690,0,11,11
+4,c-O2,20260922,3,0,warmup,3,count,control,16384,1,97444,f6a0fa6e20559b85,0,11,11
+4,c-O2,20260922,4,0,warmup,4,hash_chain,control_bis,4096,1,6595,d2f4c6a9cd3b03a2,0,11,11
+4,c-O2,20260922,5,1,measure,0,hash_chain,control,4096,1,6594,d2f4c6a9cd3b03a2,0,11,11
+4,c-O2,20260922,6,1,measure,1,count,control,16384,1,93010,f6a0fa6e20559b85,0,11,11
+4,c-O2,20260922,7,1,measure,2,hash_chain,control_bis,4096,1,6595,d2f4c6a9cd3b03a2,0,11,11
+4,c-O2,20260922,8,1,measure,3,hash_chain,control_double,4096,2,13140,174e2e43fff59690,0,11,11
+4,c-O2,20260922,9,1,measure,4,dot,control,4096,1,3348,40903ff84d9cc6a3,0,11,11

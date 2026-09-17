@@ -163,3 +163,32 @@
 - **Déroulage de boucle** (*loop unrolling*) : le compilateur écrit plusieurs itérations
   par tour de boucle.
 - **Demi-octave** : facteur $\sqrt{2}$ entre deux tailles successives.
+- **Compilation anticipée** (*ahead-of-time compilation*) : traduction du programme en
+  code machine avant son exécution (C, Rust, Go).
+- **Interpréteur** (*interpreter*) : programme qui exécute un code intermédiaire
+  (*bytecode*) instruction par instruction, comme CPython.
+- **Compilation à la volée** (*just-in-time compilation*, JIT) : traduction en code
+  machine pendant l'exécution, des parties souvent exécutées.
+- **Ramasse-miettes** (*garbage collector*) : récupération automatique de la mémoire qui
+  n'est plus utilisée.
+- **Vérification de bornes** (*bounds check*) : test qu'un indice est dans le tableau
+  avant d'y accéder ; le compilateur peut l'éliminer quand il prouve qu'elle réussit.
+- **Bibliothèque native** (*native library*) : code compilé appelé depuis un langage
+  interprété (NumPy, OpenBLAS).
+- **Traduction contrôlée, écriture idiomatique** (*controlled translation*, *idiomatic
+  code*) : même algorithme écrit de la même façon dans chaque langage, ou écrit comme
+  le ferait un habitué de chaque langage.
+- **Durée de démarrage** (*startup time*) : du lancement d'un programme au moment où il
+  peut travailler ; ici mesurée sur un programme qui se termine aussitôt.
+- **Liaison dynamique** (*dynamic linking*) : chargement et raccordement des bibliothèques
+  partagées au lancement d'un programme ; un exécutable **statique** les contient déjà.
+- **Remplacement sur pile** (*on-stack replacement*, OSR) : passage d'une boucle en cours
+  d'exécution du code interprété au code compilé par le JIT.
+- **Désoptimisation** (*deoptimization*) : retour d'un code compilé par le JIT vers un code
+  moins optimisé, quand une hypothèse du compilateur cesse d'être vraie.
+- **Ramasse-miettes générationnel** (*generational garbage collector*) : collecteur qui
+  collecte souvent une zone d'objets jeunes et plus rarement les survivants promus.
+- **Pause** (*stop-the-world pause*) : période où le programme est arrêté par le
+  ramasse-miettes.
+- **Surcoût d'échauffement** (*warm-up overhead*) : temps perdu par rapport au régime
+  établi pendant qu'un environnement d'exécution optimise le code.

@@ -1,0 +1,2 @@
+run_id,mode,runtime,total_ns,operations,checksum,gc_count,gc_pause_ns,peak_rss_kib,cpus_allowed
+57,python-gc,CPython gc=on,1579189034,8388608,56075093016576,0,0,188312,11

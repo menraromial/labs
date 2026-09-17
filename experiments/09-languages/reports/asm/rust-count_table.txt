@@ -1,0 +1,47 @@
+    9bc0:	push   rbp
+    9bc1:	push   rbx
+    9bc2:	push   rax
+    9bc3:	test   rsi,rsi
+    9bc6:	je     9c31 <bench::count_table+0x71>
+    9bc8:	xor    r10d,r10d
+    9bcb:	movabs r11,0x9e3779b97f4a7c15
+    9bd5:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    9be0:	mov    ebx,DWORD PTR [rdi+r10*4]
+    9be4:	inc    ebx
+    9be6:	mov    rax,rbx
+    9be9:	imul   rax,r11
+    9bed:	shr    rax,0x2f
+    9bf1:	cmp    rax,rcx
+    9bf4:	jae    9c38 <bench::count_table+0x78>
+    9bf6:	inc    r10
+    9bf9:	nop    DWORD PTR [rax+0x0]
+    9c00:	mov    ebp,DWORD PTR [rdx+rax*4]
+    9c03:	test   ebp,ebp
+    9c05:	je     9c20 <bench::count_table+0x60>
+    9c07:	cmp    ebp,ebx
+    9c09:	je     9c20 <bench::count_table+0x60>
+    9c0b:	inc    eax
+    9c0d:	and    eax,0x1ffff
+    9c12:	cmp    rax,rcx
+    9c15:	jb     9c00 <bench::count_table+0x40>
+    9c17:	jmp    9c38 <bench::count_table+0x78>
+    9c19:	nop    DWORD PTR [rax+0x0]
+    9c20:	mov    DWORD PTR [rdx+rax*4],ebx
+    9c23:	cmp    rax,r9
+    9c26:	jae    9c4b <bench::count_table+0x8b>
+    9c28:	inc    DWORD PTR [r8+rax*4]
+    9c2c:	cmp    r10,rsi
+    9c2f:	jne    9be0 <bench::count_table+0x20>
+    9c31:	add    rsp,0x8
+    9c35:	pop    rbx
+    9c36:	pop    rbp
+    9c37:	ret
+    9c38:	lea    rdx,[rip+0x56a79]        # 606b8 <__do_global_dtors_aux_fini_array_entry+0x98>
+    9c3f:	mov    rdi,rax
+    9c42:	mov    rsi,rcx
+    9c45:	call   QWORD PTR [rip+0x5a2cd]        # 63f18 <_GLOBAL_OFFSET_TABLE_+0x810>
+    9c4b:	lea    rdx,[rip+0x56a7e]        # 606d0 <__do_global_dtors_aux_fini_array_entry+0xb0>
+    9c52:	mov    rdi,rax
+    9c55:	mov    rsi,r9
+    9c58:	call   QWORD PTR [rip+0x5a2ba]        # 63f18 <_GLOBAL_OFFSET_TABLE_+0x810>
+    9c5e:	xchg   ax,ax

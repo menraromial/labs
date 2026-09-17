@@ -1,0 +1,17 @@
+run_id,mode,batch,operations,elapsed_ns
+10,python-gc,0,256,74022
+10,python-gc,1,256,45305
+10,python-gc,2,256,43035
+10,python-gc,3,256,42617
+10,python-gc,4,256,43858
+10,python-gc,5,256,43100
+10,python-gc,6,256,42854
+10,python-gc,7,256,42739
+10,python-gc,8,256,43826
+10,python-gc,9,256,42974
+10,python-gc,10,256,42613
+10,python-gc,11,256,42658
+10,python-gc,12,256,43772
+10,python-gc,13,256,42669
+10,python-gc,14,256,42491
+10,python-gc,15,256,42183

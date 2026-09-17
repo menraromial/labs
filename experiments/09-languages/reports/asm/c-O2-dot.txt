@@ -1,0 +1,14 @@
+    2180:	xor    eax,eax
+    2182:	pxor   xmm1,xmm1
+    2186:	nop    DWORD PTR [rax+0x0]
+    218a:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    2195:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    21a0:	movsd  xmm0,QWORD PTR [rdi+rax*8]
+    21a5:	mulsd  xmm0,QWORD PTR [rsi+rax*8]
+    21aa:	add    rax,0x1
+    21ae:	addsd  xmm1,xmm0
+    21b2:	cmp    rdx,rax
+    21b5:	jne    21a0 <dot+0x20>
+    21b7:	movapd xmm0,xmm1
+    21bb:	ret
+    21bc:	nop    DWORD PTR [rax+0x0]

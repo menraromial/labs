@@ -1,0 +1,2 @@
+run_id,mode,runtime,total_ns,operations,checksum,gc_count,gc_pause_ns,peak_rss_kib,cpus_allowed
+157,node,node v26.7.0,1087604473,8388608,56075093016576,26,918592877,619564,11

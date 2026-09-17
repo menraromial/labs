@@ -1,0 +1,17 @@
+run_id,mode,batch,operations,elapsed_ns
+9,python-nogc,0,256,56050
+9,python-nogc,1,256,44530
+9,python-nogc,2,256,42759
+9,python-nogc,3,256,43083
+9,python-nogc,4,256,44543
+9,python-nogc,5,256,43251
+9,python-nogc,6,256,42863
+9,python-nogc,7,256,42370
+9,python-nogc,8,256,44398
+9,python-nogc,9,256,43249
+9,python-nogc,10,256,42290
+9,python-nogc,11,256,42679
+9,python-nogc,12,256,44278
+9,python-nogc,13,256,42825
+9,python-nogc,14,256,43041
+9,python-nogc,15,256,42497

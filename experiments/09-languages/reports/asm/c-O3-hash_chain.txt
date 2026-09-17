@@ -1,0 +1,13 @@
+    21c0:	mov    rax,rdx
+    21c3:	lea    rcx,[rdi+rsi*8]
+    21c7:	movabs rdx,0x9e3779b97f4a7c15
+    21d1:	nop    DWORD PTR [rax+0x0]
+    21d5:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    21e0:	xor    rax,QWORD PTR [rdi]
+    21e3:	add    rdi,0x8
+    21e7:	imul   rax,rdx
+    21eb:	cmp    rcx,rdi
+    21ee:	jne    21e0 <hash_chain+0x20>
+    21f0:	ret
+    21f1:	nop    DWORD PTR [rax+0x0]
+    21f5:	data16 cs nop WORD PTR [rax+rax*1+0x0]

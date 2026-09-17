@@ -1,0 +1,44 @@
+    2280:	push   rbx
+    2281:	mov    r8,rdx
+    2284:	mov    r10,rcx
+    2287:	mov    r9,rdi
+    228a:	movabs r11,0x9e3779b97f4a7c15
+    2294:	lea    rbx,[rdi+rsi*4]
+    2298:	nop    DWORD PTR [rax+rax*1+0x0]
+    22a0:	mov    eax,DWORD PTR [r9]
+    22a3:	lea    ecx,[rax+0x1]
+    22a6:	mov    rdi,rcx
+    22a9:	imul   rcx,r11
+    22ad:	shr    rcx,0x2f
+    22b1:	lea    rax,[rcx*4+0x0]
+    22b9:	lea    rsi,[r8+rax*1]
+    22bd:	mov    edx,DWORD PTR [rsi]
+    22bf:	cmp    edi,edx
+    22c1:	je     2322 <count_table+0xa2>
+    22c3:	test   edx,edx
+    22c5:	jne    2304 <count_table+0x84>
+    22c7:	jmp    2322 <count_table+0xa2>
+    22c9:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    22d4:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    22df:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    22ea:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    22f5:	data16 cs nop WORD PTR [rax+rax*1+0x0]
+    2300:	cmp    edx,edi
+    2302:	je     2322 <count_table+0xa2>
+    2304:	lea    eax,[rcx+0x1]
+    2307:	mov    ecx,eax
+    2309:	and    eax,0x1ffff
+    230e:	shl    rax,0x2
+    2312:	and    ecx,0x1ffff
+    2318:	lea    rsi,[r8+rax*1]
+    231c:	mov    edx,DWORD PTR [rsi]
+    231e:	test   edx,edx
+    2320:	jne    2300 <count_table+0x80>
+    2322:	add    r9,0x4
+    2326:	mov    DWORD PTR [rsi],edi
+    2328:	add    DWORD PTR [r10+rax*1],0x1
+    232d:	cmp    rbx,r9
+    2330:	jne    22a0 <count_table+0x20>
+    2336:	pop    rbx
+    2337:	ret
+    2338:	nop    DWORD PTR [rax+rax*1+0x0]

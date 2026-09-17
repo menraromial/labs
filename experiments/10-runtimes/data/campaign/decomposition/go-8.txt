@@ -1,0 +1,3 @@
+init internal/bytealg @0 ms, 0 ms clock, 0 bytes, 0 allocs
+init internal/runtime/gc/scan @0.062 ms, 0 ms clock, 0 bytes, 0 allocs
+init runtime @0.074 ms, 0.007 ms clock, 0 bytes, 0 allocs
