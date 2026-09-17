@@ -61,14 +61,19 @@ algorithme, bibliothèque et langage.
 - [x] Projet C1 : campagne sur cœurs P, E et LP-E, interprétation, fiche superviseur.
 - [x] Projet C2 : prédictions et contrôles d'attribution fixés avant la campagne.
 - [x] Projet C2 : latence, TLB et défauts de page mesurés, fiche superviseur.
+- [x] Projet D1 : prédictions, comptes d'appels système vérifiés par le noyau.
+- [x] Projet D1 : coût d'entrée, lots et tampons mesurés, fiche superviseur.
+- [x] Projet D2 : cache de pages, stockage et persistance mesurés, fiche superviseur.
 
 Voir [le diagnostic initial](docs/environment-observed.md),
 [le projet A1](experiments/01-time/README.md),
 [le projet A2](experiments/02-microbenchmark/README.md),
 [le projet B1](experiments/03-compilation/README.md),
 [le projet B2](experiments/04-dependencies-branches/README.md),
-[le projet C1](experiments/05-memory-traversal/README.md) et
-[le projet C2](experiments/06-dependent-access/README.md).
+[le projet C1](experiments/05-memory-traversal/README.md),
+[le projet C2](experiments/06-dependent-access/README.md),
+[le projet D1](experiments/07-syscalls/README.md) et
+[le projet D2](experiments/08-files/README.md).
 
 ## Structure cible (créée progressivement)
 

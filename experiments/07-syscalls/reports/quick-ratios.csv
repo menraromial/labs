@@ -1,0 +1,36 @@
+core,ratio,median,ci95_low,ci95_high,min,max
+P,syscall_clock/vdso_clock,7.422,7.422,7.422,7.422,7.422
+P,enosys/getppid,0.908,0.908,0.908,0.908,0.908
+P,getppid/function,126.266,126.266,126.266,126.266,126.266
+P,aa_getppid_bis/getppid,0.982,0.982,0.982,0.982,0.982
+P,positive_double/getppid,1.949,1.949,1.949,1.949,1.949
+P,records_write_each/stdio_default,7.975,7.975,7.975,7.975,7.975
+P,records_stdio_64k/stdio_default,0.897,0.897,0.897,0.897,0.897
+P,records_manual_4k/stdio_default,0.080,0.080,0.080,0.080,0.080
+P,records_write_each/write_dev_null_16,1.069,1.069,1.069,1.069,1.069
+E,syscall_clock/vdso_clock,7.481,7.481,7.481,7.481,7.481
+E,enosys/getppid,0.934,0.934,0.934,0.934,0.934
+E,getppid/function,110.126,110.126,110.126,110.126,110.126
+E,aa_getppid_bis/getppid,0.991,0.991,0.991,0.991,0.991
+E,positive_double/getppid,1.978,1.978,1.978,1.978,1.978
+E,records_write_each/stdio_default,11.773,11.773,11.773,11.773,11.773
+E,records_stdio_64k/stdio_default,0.970,0.970,0.970,0.970,0.970
+E,records_manual_4k/stdio_default,0.121,0.121,0.121,0.121,0.121
+E,records_write_each/write_dev_null_16,1.062,1.062,1.062,1.062,1.062
+LP-E,syscall_clock/vdso_clock,6.916,6.916,6.916,6.916,6.916
+LP-E,enosys/getppid,0.959,0.959,0.959,0.959,0.959
+LP-E,getppid/function,103.234,103.234,103.234,103.234,103.234
+LP-E,aa_getppid_bis/getppid,1.006,1.006,1.006,1.006,1.006
+LP-E,positive_double/getppid,2.009,2.009,2.009,2.009,2.009
+LP-E,records_write_each/stdio_default,11.117,11.117,11.117,11.117,11.117
+LP-E,records_stdio_64k/stdio_default,0.948,0.948,0.948,0.948,0.948
+LP-E,records_manual_4k/stdio_default,0.125,0.125,0.125,0.125,0.125
+LP-E,records_write_each/write_dev_null_16,1.000,1.000,1.000,1.000,1.000
+E,syscall_getppid E/P,1.397,,,,
+E,syscall_enosys E/P,1.437,,,,
+E,syscall_clock_gettime E/P,1.544,,,,
+E,function_call E/P,1.601,,,,
+LP-E,syscall_getppid LP-E/P,2.299,,,,
+LP-E,syscall_enosys LP-E/P,2.427,,,,
+LP-E,syscall_clock_gettime LP-E/P,2.574,,,,
+LP-E,function_call LP-E/P,2.812,,,,

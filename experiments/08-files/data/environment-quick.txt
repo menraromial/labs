@@ -1,0 +1,113 @@
+2026-09-17T13:21:26+02:00
+Linux pl-dapi-na-salsa-004 7.0.0-31-generic #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Aug  1 04:26:38 UTC 2026 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="26.04"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+Architecture :                            x86_64
+Mode(s) opératoire(s) des processeurs :   32-bit, 64-bit
+Tailles des adresses:                     46 bits physical, 48 bits virtual
+Boutisme :                                Little Endian
+Processeur(s) :                           22
+Liste de processeur(s) en ligne :         0-21
+Identifiant constructeur :                GenuineIntel
+Nom de modèle :                           Intel(R) Core(TM) Ultra 7 165H
+Famille de processeur :                   6
+Modèle :                                  170
+Thread(s) par cœur :                      2
+Cœur(s) par socket :                      16
+Socket(s) :                               1
+Révision :                                4
+multiplication des MHz du/des CPU(s) :    27%
+Vitesse maximale du processeur en MHz :   5000,0000
+Vitesse minimale du processeur en MHz :   400,0000
+BogoMIPS :                                6144,00
+Drapeaux :                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid bus_lock_detect movdiri movdir64b fsrm md_clear serialize pconfig arch_lbr ibt flush_l1d arch_capabilities
+Virtualisation :                          VT-x
+Cache L1d :                               544 KiB (14 instances)
+Cache L1i :                               896 KiB (14 instances)
+Cache L2 :                                18 MiB (9 instances)
+Cache L3 :                                24 MiB (1 instance)
+Nœud(s) NUMA :                            1
+Nœud NUMA 0 de processeur(s) :            0-21
+Vulnérabilité Gather data sampling :      Not affected
+Vulnérabilité Ghostwrite :                Not affected
+Vulnérabilité Indirect target selection : Not affected
+Vulnérabilité Itlb multihit :             Not affected
+Vulnérabilité L1tf :                      Not affected
+Vulnérabilité Mds :                       Not affected
+Vulnérabilité Meltdown :                  Not affected
+Vulnérabilité Mmio stale data :           Not affected
+Vulnérabilité Old microcode :             Not affected
+Vulnérabilité Reg file data sampling :    Not affected
+Vulnérabilité Retbleed :                  Not affected
+Vulnérabilité Spec rstack overflow :      Not affected
+Vulnérabilité Spec store bypass :         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnérabilité Spectre v1 :                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnérabilité Spectre v2 :                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS Not affected; BHI BHI_DIS_S
+Vulnérabilité Srbds :                     Not affected
+Vulnérabilité Tsa :                       Not affected
+Vulnérabilité Tsx async abort :           Not affected
+Vulnérabilité Vmscape :                   Mitigation; IBPB before exit to userspace
+               total       utilisé      libre     partagé tamp/cache   disponible
+Mem:            14Gi       9,3Gi       1,6Gi       1,3Gi       5,3Gi       5,3Gi
+Échange:          0B          0B          0B
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+ldd (Ubuntu GLIBC 2.43-2ubuntu2.4) 2.43
+Python 3.14.4
+cmdline=BOOT_IMAGE=/vmlinuz-7.0.0-31-generic root=/dev/mapper/ubuntu--vg-ubuntu--lv ro quiet splash crashkernel=2G-4G:320M,4G-32G:512M,32G-64G:1024M,64G-128G:2048M,128G-:4096M
+scaling_governor=powersave
+energy_performance_preference=power
+cpuidle_governor=menu
+cpu11 POLL latence_sortie_us=0
+cpu11 C1E latence_sortie_us=1
+cpu11 C6 latence_sortie_us=140
+cpu11 C10 latence_sortie_us=310
+loadavg=1.47 1.12 1.05 1/2579 1834658
+none
+
+stockage :
+Sys. de fichiers                  Taille Utilisé Dispo Uti% Monté sur
+/dev/mapper/ubuntu--vg-ubuntu--lv   935G    560G  328G  64% /
+tmpfs                               7,3G    157M  7,2G   3% /dev/shm
+/dev/mapper/ubuntu--vg-ubuntu--lv ext4 rw,relatime
+tmpfs tmpfs rw,nosuid,nodev,inode64,usrquota
+rw bsddf nogrpid block_validity dioread_nolock nodiscard delalloc nowarn_on_error journal_checksum barrier auto_da_alloc user_xattr acl noquota resuid=0 resgid=0 errors=continue commit=5 min_batch_time=0 max_batch_time=15000 i_version stripe=0 data=ordered inode_readahead_blks=32 init_itable=10 max_dir_size_kb=0 prefetch_block_bitmaps 
+152101 transactions (146348 requested), each up to 87381 blocks
+NAME                      TYPE   SIZE ROTA MODEL                      SCHED
+nvme0n1                   disk 953,9G    0 SAMSUNG MZVL21T0HCLR-00BH1 none
+├─nvme0n1p1               part     1G    0                            none
+├─nvme0n1p2               part     2G    0                            none
+└─nvme0n1p3               part 950,8G    0                            none
+  └─ubuntu--vg-ubuntu--lv lvm  950,8G    0                            
+/sys/block/nvme0n1/queue/logical_block_size=512
+/sys/block/nvme0n1/queue/max_sectors_kb=128
+/sys/block/nvme0n1/queue/read_ahead_kb=128
+/sys/block/nvme0n1/queue/nr_requests=1023
+/sys/block/nvme0n1/queue/scheduler=[none] mq-deadline 
+/sys/block/nvme0n1/queue/write_cache=write back
+/sys/block/nvme0n1/queue/fua=1
+/sys/block/nvme0n1/queue/io_poll=0
+/sys/block/dm-0/queue/logical_block_size=512
+/sys/block/dm-0/queue/max_sectors_kb=128
+/sys/block/dm-0/queue/read_ahead_kb=128
+/sys/block/dm-0/queue/nr_requests=indisponible
+/sys/block/dm-0/queue/scheduler=indisponible
+/sys/block/dm-0/queue/write_cache=write back
+/sys/block/dm-0/queue/fua=1
+/sys/block/dm-0/queue/io_poll=0
+nvme_firmware=HPS4NGXH
+nvme_core.default_ps_max_latency_us=100000
+MemAvailable:    5492912 kB
+Cached:          4708320 kB
+Dirty:              8620 kB
+Writeback:             0 kB
+vm.dirty_ratio=20
+vm.dirty_background_ratio=10
+vm.dirty_expire_centisecs=3000
+vm.dirty_writeback_centisecs=500
+transparent_hugepage=always [madvise] never
+options de compilation :
+sources et binaire :
+06d41413d388da93045dd203a0adbce15fa0bd9825899cac67f68b73cf6c302a  src/files.c
+d264aec9433c983df6ee07b5e93625b55cd3a65059938599b9b6a562b6e62cd1  build/files

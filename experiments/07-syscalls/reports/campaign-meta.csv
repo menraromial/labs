@@ -1,0 +1,4 @@
+core,processes,stdio_default_buffer,max_involuntary_switches
+P,10,4096,81
+E,10,4096,415
+LP-E,10,4096,326

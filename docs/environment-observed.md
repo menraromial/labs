@@ -58,6 +58,41 @@ Aucun benchmark de durée n'a encore été exécuté.
   d'administration (`dmidecode`).
 - Défaut de page mineur en pages de 4 Kio, mise à zéro comprise : environ 2 µs.
 
+## Compléments observés pendant D1
+
+- Atténuations actives : Spectre v2 par IBRS amélioré, IBPB conditionnel, BHI ;
+  Meltdown non concerné ; VMScape atténué par IBPB avant le retour en espace
+  utilisateur. Le noyau est compilé avec `CONFIG_MITIGATION_PAGE_TABLE_ISOLATION`,
+  sans effet attendu sur un processeur non concerné par Meltdown.
+- `CONFIG_HZ=1000` et `CONFIG_VIRT_CPU_ACCOUNTING_GEN=y`, mais sans `nohz_full` sur
+  la ligne de commande : temps utilisateur et système répartis par échantillonnage
+  au tick, inutilisables sur des fenêtres de quelques millisecondes.
+- Glibc : tampon de 4 Kio choisi par `fwrite` pour `/dev/null`
+  (`st_blksize` = 4 096).
+- `/proc/self/io` compte exactement les appels `read` et `write` d'un processus,
+  sans privilège.
+
+## Compléments observés pendant D2
+
+- Stockage : ext4 (`data=ordered`, `delalloc`, `barrier`, `commit=5`,
+  `nodiscard`) sur LVM (`dm-0`), sur un SSD NVMe Samsung `MZVL21T0HCLR` de 1 To
+  (micrologiciel `HPS4NGXH`), ordonnanceur d'entrées-sorties `none`, cache
+  d'écriture volatile (`write back`) et FUA annoncés, lecture anticipée de 128 Kio.
+  `/dev/shm` et `/tmp` sont des tmpfs de 7,3 Gio.
+- Écriture différée : `vm.dirty_ratio` 20, `vm.dirty_background_ratio` 10,
+  `vm.dirty_expire_centisecs` 3 000.
+- Lecture de 4 Kio : 1,35 µs depuis le cache de pages, 58 µs depuis le disque,
+  54,8 µs en `O_DIRECT` (cœur P). Lecture séquentielle de 256 Mio : 5,4 Gio/s en
+  cache, 2,5 Gio/s depuis le disque, 1,35 Gio/s en `O_DIRECT`.
+- Persistance : chaque `fsync` ou `fdatasync` envoie un vidage au disque ; 7,0 ms
+  quand une transaction du journal est validée (ajout, ou réécriture avec `fsync`),
+  2,0 ms sinon (réécriture avec `fdatasync` ou `O_DSYNC`). Coût d'un `fsync` :
+  6,94 ms plus 4,8 µs par enregistrement de 4 Kio du lot.
+- Les fins de requête NVMe sont traitées sur la file du CPU qui les soumet
+  (`nvme0q8` pour le CPU 11).
+- Le noyau utilise de grands folios dans le cache de pages d'ext4 : `write_bytes`
+  compte 1 Mio par réécriture de 4 Kio d'un fichier écrit d'un seul bloc de 1 Mio.
+
 ## Ce que ces faits ne garantissent pas
 
 - La topologie hybride exacte des cœurs performants/efficaces n'est pas encore

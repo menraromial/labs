@@ -1,0 +1,20 @@
+ratio,median,ci95_low,ci95_high,min,max
+rand_read_cold/rand_read_warm,44.734,44.734,44.734,44.734,44.734
+rand_read_cold p99/median,1.327,1.327,1.327,1.327,1.327
+rand_read_direct/rand_read_cold,0.934,0.934,0.934,0.934,0.934
+aa rand_read_cold_bis/rand_read_cold,0.974,0.974,0.974,0.974,0.974
+positive rand_read_direct_double/rand_read_direct,2.001,2.001,2.001,2.001,2.001
+seq_read_warm/seq_read_cold (throughput),2.031,2.031,2.031,2.031,2.031
+seq_read_direct/seq_read_cold (throughput),0.555,0.555,0.555,0.555,0.555
+append_fsync_1/append_buffered,1824.487,1824.487,1824.487,1824.487,1824.487
+append_fsync_1/tmpfs_append_fsync,3527.737,3527.737,3527.737,3527.737,3527.737
+overwrite_fdatasync/overwrite_fsync,0.285,0.285,0.285,0.285,0.285
+append_fdatasync/append_fsync_1,1.004,1.004,1.004,1.004,1.004
+overwrite_fsync/append_fsync_1,0.997,0.997,0.997,0.997,0.997
+overwrite_odsync/overwrite_fdatasync,0.910,0.910,0.910,0.910,0.910
+overwrite_fdatasync_folio/overwrite_fdatasync,1.039,1.039,1.039,1.039,1.039
+overwrite_odsync_folio/overwrite_odsync,1.167,1.167,1.167,1.167,1.167
+aa overwrite_fdatasync_bis/overwrite_fdatasync,0.990,0.990,0.990,0.990,0.990
+positive overwrite_fdatasync_double/overwrite_fdatasync,2.079,2.079,2.079,2.079,2.079
+per record append_fsync_256/append_fsync_1,0.005,0.005,0.005,0.005,0.005
+per record (append_buffered + fsync)/append_fsync_256,1.026,1.026,1.026,1.026,1.026

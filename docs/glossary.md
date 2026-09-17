@@ -115,4 +115,38 @@
   aucun disque n'est lu.
 - **Cycle de Sattolo** (*Sattolo's algorithm*) : permutation aléatoire formant un
   seul cycle qui passe par tous les éléments.
-
+- **Espace utilisateur, espace noyau** (*user space*, *kernel space*) : exécution
+  avec droits restreints, et exécution du noyau avec tous les droits.
+- **Appel système** (*system call*) : demande explicite d'un service au noyau, avec
+  changement de mode du processeur à l'entrée et à la sortie.
+- **Atténuation** (*mitigation*) : protection du noyau contre une vulnérabilité
+  matérielle, souvent au prix d'un surcoût à l'entrée ou à la sortie du noyau.
+- **Descripteur de fichier** (*file descriptor*) : entier désignant un fichier ouvert
+  par le processus.
+- **Traitement par lots** (*batching*) : regrouper en un appel ce qui aurait demandé
+  plusieurs appels.
+- **Tampon** (*buffer*) : zone où les données s'accumulent avant d'être transmises
+  en une fois.
+- **Temps utilisateur, temps système** (*user time*, *system time*) : temps CPU
+  passé dans le programme ou dans le noyau pour son compte ; sous Linux, réparti
+  par échantillonnage au tick.
+- **Cache de pages** (*page cache*) : mémoire où le noyau garde le contenu des
+  fichiers ; une lecture qui y trouve ses données ne touche pas le disque.
+- **Lecture anticipée** (*readahead*) : lecture par le noyau de la suite d'un fichier
+  lu séquentiellement, avant qu'elle soit demandée.
+- **Entrée-sortie directe** (*direct I/O*, `O_DIRECT`) : lecture ou écriture qui
+  contourne le cache de pages.
+- **Page sale** (*dirty page*) : page du cache modifiée, pas encore écrite sur le
+  disque ; le noyau l'écrit plus tard (*writeback*).
+- **Persistance** (*durability*) : garantie que des données écrites survivent à une
+  coupure ; demandée par `fsync`, `fdatasync` ou `O_DSYNC`, jamais vérifiable sans
+  couper l'alimentation.
+- **Journal** (*journal*, *jbd2*) : zone où ext4 écrit d'abord ses modifications de
+  métadonnées, validées par transactions (*commit*).
+- **Vidage du cache du disque** (*flush*) et **FUA** (*force unit access*) : demande
+  au disque de rendre persistantes les écritures gardées dans sa mémoire volatile,
+  pour toutes ou pour une seule écriture.
+- **Folio** (*folio*) : unité de gestion du cache de pages, d'une ou de plusieurs
+  pages contiguës.
+- **Regroupement des validations** (*group commit*) : une seule demande de
+  persistance pour plusieurs écritures, qui en partage le coût fixe.

@@ -1,0 +1,7 @@
+core,device,S_ns_per_call,b_ns_per_byte,crossover_bytes,per_call_1B_over_1MiB,throughput_1MiB_gib_per_s
+P,write_dev_null,163.31,0.000005,35442327,1.1927,5759.31
+P,read_dev_zero,175.22,0.022575,7762,0.0045,24.20
+E,write_dev_null,226.22,0.000016,14243055,0.9505,4009.49
+E,read_dev_zero,269.21,0.045681,5893,0.0050,17.43
+LP-E,write_dev_null,382.06,0.000047,8174350,0.8969,2244.65
+LP-E,read_dev_zero,449.80,0.078049,5763,0.0046,9.69
